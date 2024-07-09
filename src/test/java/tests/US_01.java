@@ -6,6 +6,8 @@ public class US_01 {
 
     @Test
     public void TC_0101() {
+        System.out.println("merhaba");
+
 
         System.out.println("hello world");
 
