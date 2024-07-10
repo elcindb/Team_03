@@ -8,10 +8,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US_01 {
+public class US_01{
 
     @Test
     public void TC_0101() {
+
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
         userPage userPage = new userPage();
         Assert.assertTrue(userPage.headerLogo.isDisplayed());

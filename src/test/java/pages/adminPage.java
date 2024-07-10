@@ -8,4 +8,6 @@ public class adminPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
+
 }
