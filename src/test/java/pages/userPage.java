@@ -12,6 +12,9 @@ public class userPage {
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement headerLogo;
 
+    @FindBy(xpath = "//*[@class='btn-white-parent non-trasparent']")
+    public WebElement joinUsButton;
+
 
 
 }
