@@ -6,6 +6,7 @@ import utilities.Driver;
 public class merchantPage {
 
     public merchantPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
