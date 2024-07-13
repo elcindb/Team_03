@@ -73,9 +73,14 @@ public class userPage {
     public WebElement UserCart;
 
 
+
+    @FindBy(xpath = "//*[@class='btn-white-parent non-trasparent']")
+    public WebElement joinUsButton;
+
     // User sayfasında konum search yerı Enter delivery address
     @FindBy(xpath = "//div[@id='vue-home-search']//input[@placeholder='Enter delivery address']")
     public WebElement UserSearchAddress;
+
 
     // User Join olma butonu
     @FindBy(xpath = "//*[@class='btn btn-link w25']")
