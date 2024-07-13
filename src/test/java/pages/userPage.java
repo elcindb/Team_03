@@ -200,5 +200,7 @@ public class userPage {
     public WebElement UserAddNewAddress;
     @FindBy(xpath = "(//*[@class='d-block chevron-section promo-section d-flex align-items-center rounded mb-2'])[3]")
     public WebElement UserChooseDeliveryAddress;
+    @FindBy(xpath = "//*[@class='top-logo']")
+    public WebElement headerLogo;
 
 }
