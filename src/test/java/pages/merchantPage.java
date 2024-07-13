@@ -7,8 +7,11 @@ import utilities.Driver;
 
 public class merchantPage {
 
-    public merchantPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+
+    public merchantPage(){
+   PageFactory.initElements(Driver.getDriver(),this);
+
+   
     }
 
     //>>>Sidebar Dashboard Menu
