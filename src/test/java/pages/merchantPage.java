@@ -14,7 +14,6 @@ public class merchantPage {
     }
 
 
-
     //>>>Sidebar Merchant Menu
     @FindBy(xpath = "//li[@class='merchant']")
     public WebElement merchantMenu;
