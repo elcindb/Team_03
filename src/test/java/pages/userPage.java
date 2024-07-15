@@ -208,4 +208,81 @@ public class userPage {
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement headerLogo;
 
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-facebook']")
+    public WebElement facebookButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-instagram']")
+    public WebElement instagramButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-linkedin']")
+    public WebElement linkedinButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-twitter']")
+    public WebElement twitterButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-youtube-play']")
+    public WebElement youtubeButton;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][]")
+    public WebElement fastfoodBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][2]")
+    public WebElement pizzaBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][3]")
+    public WebElement sandwichesAndWrapsBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][4]")
+    public WebElement italianBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][5]")
+    public WebElement soupsAndStewsBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][6]")
+    public WebElement japaneseBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][7]")
+    public WebElement dessertAndSnacksBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][8]")
+    public WebElement chineseButton;
+
+    @FindBy( xpath= "//*div[@id = 'owl-carousel-nav prev mr-4']")
+    public WebElement oncekiButton;
+
+    @FindBy( xpath= "//*[@class = 'owl-carousel-nav next mr-4']")
+    public WebElement sonrakiButton;
+
+    @FindBy (xpath = "//*div[@id = 'Team3']")
+    public WebElement team3Box;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][1]")
+    public WebElement iskenderAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][3]")
+    public WebElement pizzaAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][4]")
+    public WebElement hamburgerAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][5]")
+    public WebElement mozarellaSticksAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'zmdi zmdi-minus']")
+    public WebElement eksiButton;
+
+    @FindBy (xpath = "//*div[@class = 'zmdi zmd-plus']")
+    public WebElement artiButton;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-green add_to_cart']")
+    public WebElement addToCartButton;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-green w-100 pointer d-flex justify-content-between']")
+    public WebElement checkOutButton;
+
+    @FindBy (xpath = "//*div[@class = 'mr-1']")
+    public WebElement cashpaymentButton;
+
+    @FindBy (xpath = "//*div [@class = 'btn btn-green w-100']" )
+    public WebElement addCashButton;
 }
