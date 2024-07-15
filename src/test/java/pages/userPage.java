@@ -5,200 +5,287 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class userPage {
-    public userPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+import java.util.List;
 
+public class userPage {
+
+    public userPage(){
+    PageFactory.initElements(Driver.getDriver(),this);
+
+}
     // user sayfasındakı flavor fetch logosunun xpath
     @FindBy(xpath = "//*[@class='top-logo']")
-    public WebElement Userlogo;
+    public WebElement userlogo;
 
     // user sayfasındakı Sign in butonunun xpath
     @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
-    public WebElement UserSignIn;
+    public WebElement userSignInBotten;
 
     // User sayfasındaki Mobile number or email
     @FindBy(xpath = "(//*[@class='required'])[1]")
-    public WebElement UserName;
+    public WebElement userNameTextBox;
 
     // User sayfasındaki Password
     @FindBy(xpath = "(//*[@class='required'])[2]")
-    public WebElement UserPassword;
+    public WebElement userPasswordTextBox;
 
     // user sayfasında login olmak için Sign in butonu
     @FindBy(xpath = "//*[@class='btn btn-green w-100']")
-    public WebElement UserGiris;
+    public WebElement userGirisBotten;
 
     // User sayfasında login olunduktan sonra Icon xpath
     @FindBy(xpath = "//*[@class='badge rounded-circle badge-danger count']")
-    public WebElement UserIcon;
+    public WebElement userIcon;
 
     // header kısmında dropdown menüsü
     @FindBy(xpath = "//*[@id='dropdownMenuLink']")
-    public WebElement UserDropDownMenu;
+    public WebElement userDropDownMenu;
 
     // dropdown Manage my account
     @FindBy(xpath = "//*[@class='dropdown-item with-icon-account']")
-    public WebElement UserDropdownManageMyAccount;
+    public WebElement userDropdownManageMyAccount;
 
     // dropdown My Orders
     @FindBy(xpath = "//*[@class='dropdown-item with-icon-orders']")
-    public WebElement UserDropdownMyOrders;
+    public WebElement userDropdownMyOrders;
 
     // dropdown Addresses
     @FindBy(xpath = "//*[@class='dropdown-item with-icon-addresses']")
-    public WebElement UserDropdownAddresses;
+    public WebElement userDropdownAddresses;
 
     // dropdown Payments Options
     @FindBy(xpath = "//*[@class='dropdown-item with-icon-payments']")
-    public WebElement UserPaymentsOptions;
+    public WebElement userPaymentsOptions;
 
     // dropdown Saved Stores
     @FindBy(xpath = "//*[@class='dropdown-item with-icon-savedstore']")
-    public WebElement UserSavedStore;
+    public WebElement userSavedStore;
 
     //dropdown kısmından Logout
     @FindBy(xpath = "dropdown-item with-icon-logout")
-    public WebElement UserLogout;
+    public WebElement userLogout;
 
     // header bölümündeki sepet ve sepette kaç adet sipariş olduğunu gösteren sayı ıconu
     @FindBy(xpath = "//*[@class='d-inline mr-3 mr-lg-0']")
-    public WebElement UserSepet;
+    public WebElement userSepet;
     @FindBy(xpath = "//*[@class='badge small badge-dark rounded-pill']")
-    public WebElement UserSıparısAdetı;
+    public WebElement userSıparısAdetı;
 
     // user header kısmında Cart
     @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
-    public WebElement UserCart;
+    public WebElement userCart;
 
+
+
+    @FindBy(xpath = "//*[@class='btn-white-parent non-trasparent']")
+    public WebElement joinUsButton;
 
     // User sayfasında konum search yerı Enter delivery address
     @FindBy(xpath = "//div[@id='vue-home-search']//input[@placeholder='Enter delivery address']")
-    public WebElement UserSearchAddress;
+    public WebElement userSearchAddress;
+
 
     // User Join olma butonu
     @FindBy(xpath = "//*[@class='btn btn-link w25']")
-    public WebElement UserJoin;
+    public WebElement userJoin;
 
     // Manage my account kısmına tıkladıktan sonra Basic Details kısmında fotoğraf xpath
     @FindBy(xpath = "//*[@class='handle w-100 text-center bold']")
-    public WebElement UserProfilePhoto;
+    public WebElement userProfilePhoto;
 
     // Manage my account kısmına tıkladıktan sonra Basic Details xpath
     @FindBy(xpath = "(//*[@class='active'])[2]")
-    public WebElement UserBasicDetails;
+    public WebElement userBasicDetails;
 
     @FindBy(xpath = "//input[@id='first_name']")
-    public WebElement UserFirstName;
+    public WebElement userFirstName;
     @FindBy(xpath = "//input[@id='last_name']")
-    public WebElement UserLastName;
+    public WebElement userLastName;
     @FindBy(xpath = "//input[@id='email_address']")
-    public WebElement UserEmail;
+    public WebElement userEmail;
     @FindBy(xpath = "//button[@class='dropdown-toggle']")
-    public WebElement UserNumberButton;
+    public WebElement userNumberButton;
     @FindBy(xpath = "//*[@class='mr-0 ml-1'])")
-    public WebElement UserNumberCenter;
+    public WebElement userNumberCenter;
     @FindBy(xpath = "//input[@data-mask='###################']")
-    public WebElement UserNumber;
+    public WebElement userNumber;
     @FindBy(xpath = "//button[@class='mt-3 btn btn-green w-100']")
-    public WebElement UserSubmit;
+    public WebElement userSubmit;
 
     //Change Password kısmının xpath
     // Submit butonu Basic Details xpath ile aynı oyüzden iki tane locate eklenmemiştir
     @FindBy(xpath = "//*[@class='user-change-password']")
-    public WebElement UserChangePassword;
+    public WebElement userChangePassword;
     @FindBy(xpath = "//label[@for='old_password']")
-    public WebElement UserOldPassword;
+    public WebElement userOldPassword;
     @FindBy(xpath = "//label[@for='new_password']")
-    public WebElement UserNewPassword;
+    public WebElement userNewPassword;
     @FindBy(xpath = "//label[@for='confirm_password']")
-    public WebElement UserConfirmPassword;
+    public WebElement userConfirmPassword;
 
     // Manage Account kısmının xpath
     @FindBy(xpath = "//*[@href='/account/manage_account']")
-    public WebElement UserManageAccount;
+    public WebElement userManageAccount;
     @FindBy(xpath = "//h6[normalize-space()='Account Data']")
-    public WebElement UserAccountData;
+    public WebElement userAccountData;
     @FindBy(xpath = "//h6[normalize-space()='Delete Account']")
-    public WebElement UserDeleteAccount;
+    public WebElement userDeleteAccount;
 
     // menu kısmından Orders kısmına geçmek için xpath
     @FindBy(xpath = "//*[@class='orders active']")
-    public WebElement UserMenuOrders;
+    public WebElement userMenuOrders;
 
     // menu kısmından Addresses kısmına geçmek için xpath
     @FindBy(xpath = "//*[@class='addresses']")
-    public WebElement UserMenuAddress;
+    public WebElement userMenuAddress;
 
     // menu kısmından Payments kısmına geçmek için xpath
     @FindBy(xpath = "//*[@class='payments']")
-    public WebElement UserMenuPayments;
+    public WebElement userMenuPayments;
 
     // menu kısmından Saved stores kısmına geçmek için xpath
     @FindBy(xpath = "//*[@class='favourites']")
-    public WebElement UserMenuSavedStores;
+    public WebElement userMenuSavedStores;
 
     // orders penceresindeki xpath
 
     @FindBy(xpath = "//*[@class=\"col-lg-3 d-none d-lg-block\"]")
-    public WebElement UserOrdersQty;
+    public WebElement userOrdersQty;
 
     @FindBy(xpath = "(//*[@class=\"col-lg-2 d-none d-lg-block\"])[2]")
-    public WebElement UserTotalAmount;
+    public WebElement userTotalAmount;
 
     @FindBy(xpath = "(//*[@class='pr-2'])[1]")
-    public WebElement UserMerchantIcon;
+    public WebElement userMerchantIcon;
     @FindBy(xpath = "(//*[@class='align-self-center mr-2'])[1]")
-    public WebElement UserMerchantName1;
+    public WebElement userMerchantName1;
     @FindBy(xpath = "(//*[@class='align-self-center mr-2'])[2]")
-    public WebElement UserMerchantName2;
+    public WebElement userMerchantName2;
     @FindBy(xpath = "(//*[@class='align-self-center mr-2'])[3]")
-    public WebElement UserMerchantName3;
+    public WebElement userMerchantName3;
     @FindBy(xpath = "(//*[@class='align-self-center mr-2'])[4]")
-    public WebElement UserMerchantName4;
+    public WebElement userMerchantName4;
     @FindBy(xpath = "(//*[@class='align-self-center mr-2'])[5]")
-    public WebElement UserMerchantName5;
+    public WebElement userMerchantName5;
     @FindBy(xpath = "(//*[@class='font13'])[1]")
-    public WebElement UserOrderID1;
+    public WebElement userOrderID1;
     @FindBy(xpath = "(//*[@class='font13'])[2]")
-    public WebElement UserOrderID2;
+    public WebElement userOrderID2;
     @FindBy(xpath = "(//*[@class='font13'])[3]")
-    public WebElement UserOrderID3;
+    public WebElement userOrderID3;
     @FindBy(xpath = "(//*[@class='font13'])[4]")
-    public WebElement UserOrderID4;
+    public WebElement userOrderID4;
 
     @FindBy(xpath = "(//*[@class='font13'])[5]")
-    public WebElement UserOrderID5;
+    public WebElement userOrderID5;
 
     // orders kısmında siparişlerimin durumunu incelemek için kullanılan üç nokta buttonu
     @FindBy(xpath = "((//*[@class='zmdi zmdi-more'])[1]")
-    public WebElement UserOrdersUcNokta;
+    public WebElement userOrdersUcNokta;
     @FindBy(xpath = "(//*[@class='dropdown-item ssm-toggle-nav'])[1]")
-    public WebElement UserOrdersView;
+    public WebElement userOrdersView;
     @FindBy(xpath = "(//*[@class='dropdown-item'])[1]")
-    public WebElement UserDropdownBuyAgain;
+    public WebElement userDropdownBuyAgain;
     @FindBy(xpath = "//*[@class='btn btn-green w-100 small']")
-    public WebElement UserBuyAgainButton;
+    public WebElement userBuyAgainButton;
     @FindBy(xpath = "(//*[@class='dropdown-item'])[2]")
     public WebElement UserDropdownTrack;
     @FindBy(xpath = "(//*[@class='dropdown-item'])[5]")
-    public WebElement UserDropdownCancelOrders;
+    public WebElement userDropdownCancelOrders;
     @FindBy(xpath = "(//*[@class='label'])[1]")
-    public WebElement UUserOrdersCancelButton;
+    public WebElement userOrdersCancelButton;
     @FindBy(xpath = "(//*[@class='btn btn-black w-100'])[1]")
-    public WebElement UUserOrdersDontCancel;
+    public WebElement userOrdersDontCancel;
     @FindBy(xpath = " (//*[@class='d-flex justify-content-between'])[2]")
-    public WebElement UserGoToCheckout;
+    public WebElement userGoToCheckout;
     @FindBy(xpath = "(//*[@class='d-block chevron-section promo-section d-flex align-items-center rounded mb-2'])[1]")
-    public WebElement UserPhoneNumber;
+    public WebElement userPhoneNumber;
     @FindBy(xpath = "(//*[@class='d-block chevron-section promo-section d-flex align-items-center rounded mb-2'])[2]")
-    public WebElement UserAddPromoCode;
+    public WebElement userAddPromoCode;
     @FindBy(xpath = "//*[@class='custom-control-label']")
-    public WebElement UserCondimentsButton;
+    public WebElement userCondimentsButton;
     @FindBy(xpath = "//*[@class='badge btn-black rounded-pill ml-1 font20']")
-    public WebElement UserAddNewAddress;
+    public WebElement userAddNewAddress;
     @FindBy(xpath = "(//*[@class='d-block chevron-section promo-section d-flex align-items-center rounded mb-2'])[3]")
-    public WebElement UserChooseDeliveryAddress;
+    public WebElement userChooseDeliveryAddress;
+    @FindBy(xpath = "//*[@class='top-logo']")
+    public WebElement headerLogo;
 
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-facebook']")
+    public WebElement facebookButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-instagram']")
+    public WebElement instagramButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-linkedin']")
+    public WebElement linkedinButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-twitter']")
+    public WebElement twitterButton;
+
+    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-youtube-play']")
+    public WebElement youtubeButton;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][]")
+    public WebElement fastfoodBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][2]")
+    public WebElement pizzaBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][3]")
+    public WebElement sandwichesAndWrapsBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][4]")
+    public WebElement italianBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][5]")
+    public WebElement soupsAndStewsBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][6]")
+    public WebElement japaneseBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][7]")
+    public WebElement dessertAndSnacksBox;
+
+    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][8]")
+    public WebElement chineseButton;
+
+    @FindBy( xpath= "//*div[@id = 'owl-carousel-nav prev mr-4']")
+    public WebElement oncekiButton;
+
+    @FindBy( xpath= "//*[@class = 'owl-carousel-nav next mr-4']")
+    public WebElement sonrakiButton;
+
+    @FindBy (xpath = "//*div[@id = 'Team3']")
+    public WebElement team3Box;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][1]")
+    public WebElement iskenderAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][3]")
+    public WebElement pizzaAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][4]")
+    public WebElement hamburgerAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][5]")
+    public WebElement mozarellaSticksAddCart;
+
+    @FindBy (xpath = "//*div[@class = 'zmdi zmdi-minus']")
+    public WebElement eksiButton;
+
+    @FindBy (xpath = "//*div[@class = 'zmdi zmd-plus']")
+    public WebElement artiButton;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-green add_to_cart']")
+    public WebElement addToCartButton;
+
+    @FindBy (xpath = "//*div[@class = 'btn btn-green w-100 pointer d-flex justify-content-between']")
+    public WebElement checkOutButton;
+
+    @FindBy (xpath = "//*div[@class = 'mr-1']")
+    public WebElement cashpaymentButton;
+
+    @FindBy (xpath = "//*div [@class = 'btn btn-green w-100']" )
+    public WebElement addCashButton;
 }
