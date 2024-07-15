@@ -9,11 +9,18 @@ import java.util.List;
 
 public class merchantPage {
 
+<<<<<<< HEAD
+    public merchantPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
+
+
+=======
 
     public merchantPage(){
    PageFactory.initElements(Driver.getDriver(),this);
 
    
+>>>>>>> main
     }
 
 
@@ -500,9 +507,15 @@ public class merchantPage {
     @FindBy(xpath = "//tr//td[2]")
     public List<WebElement> itemsAvailabilityCheckBoxColoumn;
 
+<<<<<<< HEAD
+    //>>Sidebar Merchant Relative Order Limit Menu
+    @FindBy(xpath = "position-relative merchant_time_management")
+    public WebElement merchOrderLimitMenu;
+=======
         //>>Sidebar Merchant Relative Order Limit Menu
         @FindBy(xpath = "position-relative merchant_time_management")
         public WebElement merchOrderLimitMenu;
+>>>>>>> main
 
     // Items Name Coloumn
     @FindBy(xpath = "//tr//td[3]")
@@ -518,9 +531,15 @@ public class merchantPage {
     public List<WebElement> itemsPriceColoumn;
 
 
+<<<<<<< HEAD
+    //>>Sidebar Merchant Relative Menu Menu
+    @FindBy(xpath = "//li[@class='position-relative merchant_pages_menu']")
+    public WebElement merchMenuMenu;
+=======
         //>>Sidebar Merchant Relative Menu Menu
         @FindBy(xpath = "//li[@class='position-relative merchant_pages_menu']")
         public WebElement merchMenuMenu;
+>>>>>>> main
 //> Relative Information Login  Menu
 
     //Relative Information Login First Name Textbox
@@ -928,7 +947,11 @@ public class merchantPage {
     //Merchant Profile Sayfasi Save
     @FindBy(xpath = "//*[@for='AR_merchant_user_repeat_password']")
     public WebElement merchantProfilePageSaveButonu;
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> main
     // Items Update Coloumn
     @FindBy(xpath = "//tr//td[6]//a[1]")
     public List<WebElement> itemsUpdateColoumn;
@@ -938,6 +961,311 @@ public class merchantPage {
     public List<WebElement> itemsDeleteColoumn;
 
 
+<<<<<<< HEAD
+    //Merchant Login sayfasindaki Username kutucugu
+    @FindBy(xpath = "//*[@placeholder='Username']")
+    public WebElement merchantLoginUsername;
+
+    //Merchant Login sayfasindaki Password kutucugu
+    @FindBy(xpath = "//*[@placeholder='Password']")
+    public WebElement merchantLoginPassword;
+
+    //Merchant Login Butonu
+    @FindBy(xpath = "//*[@value='Sign in']")
+    public WebElement merchantLoginButton;
+
+    //Attributes Menu
+    @FindBy(xpath = "//li[@class='attributes active']")
+    public WebElement attributesMenu;
+
+    //Attributes altindaki Size linki
+    @FindBy(xpath = "//li[@class='position-relative attrmerchant_size_list']")
+    public WebElement attSizeMenu;
+
+    //Attributes-Size sayfasindaki Add New Butonu
+    @FindBy(xpath = "//*[@class='btn btn-black btn-circle']")
+    public WebElement attSizeMenuAddNewButton;
+
+    //Attributes-Size sayfasindaki Arama Kutucugu
+    @FindBy(xpath = "//*[@placeholder='Search']")
+    public WebElement attSizeMenuSearchBox;
+
+    //Attributes-Size sayfasindaki Arama Butonu
+    @FindBy(xpath = "//*[@class='submit input-group-text border-0 ml-2 normal']")
+    public WebElement attSizeMenuSearchButton;
+
+    //Attributes-Size sayfasindaki Tablonun # basligi
+    @FindBy(xpath = "//th[1]")
+    public WebElement attSizeNumberTableHead;
+
+    //Attributes-Size sayfasindaki Tablonun Name basligi
+    @FindBy(xpath = "//th[2]")
+    public WebElement attSizeNameTableHead;
+
+    //Attributes-Size sayfasindaki Tablonun Actions basligi
+    @FindBy(xpath = "//th[3]")
+    public WebElement attSizeActionsTableHead;
+
+    //Attributes-Size sayfasindaki tum Edit Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Update']")
+    public List<WebElement> attSizeEditButtons;
+
+    //Attributes-Size sayfasindaki tum Delete Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Delete']")
+    public List<WebElement> attSizeDeleteButtons;
+
+    //Attributes altindaki Ingredients linki
+    @FindBy(xpath = "//*[@class='position-relative attrmerchant_ingredients_list active']")
+    public WebElement attIngredientsMenu;
+
+    //Attributes-Ingredients sayfasindaki Add New Butonu
+    @FindBy(xpath = "//*[@class='btn btn-black btn-circle']")
+    public WebElement attIngredientsMenuAddNewButton;
+
+    //Attributes-Ingredients sayfasindaki Arama Kutucugu
+    @FindBy(xpath = "//*[@placeholder='Search']")
+    public WebElement attIngredientsMenuSearchBox;
+
+    //Attributes-Ingredients sayfasindaki Arama Butonu
+    @FindBy(xpath = "//*[@class='submit input-group-text border-0 ml-2 normal']")
+    public WebElement attIngredientsMenuSearchButton;
+
+    //Attributes-Ingredients sayfasindaki Tablonun # basligi
+    @FindBy(xpath = "//th[1]")
+    public WebElement attIngredientsNumberTableHead;
+
+    //Attributes-Ingredients sayfasindaki Tablonun Name basligi
+    @FindBy(xpath = "//th[2]")
+    public WebElement attIngredientsNameTableHead;
+
+    //Attributes-Ingredients sayfasindaki Tablonun Actions basligi
+    @FindBy(xpath = "//th[3]")
+    public WebElement attIngredientsActionsTableHead;
+
+    //Attributes-Ingredients sayfasindaki tum Edit Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Update']")
+    public List<WebElement> attIngredientsEditButtons;
+
+    //Attributes-Ingredients sayfasindaki tum Delete Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Delete']")
+    public List<WebElement> attIngredientsDeleteButtons;
+
+    //Attributes altindaki Cooking Reference linki
+    @FindBy(xpath = "//*[class='position-relative attrmerchant_cookingref_list']")
+    public WebElement attCookingReferenceMenu;
+
+    //Attributes-Cooking Reference sayfasindaki Add New Butonu
+    @FindBy(xpath = "//*[@class='btn btn-black btn-circle']")
+    public WebElement attCookRefMenuAddNewButton;
+
+    //Attributes-Cooking Reference sayfasindaki Arama Kutucugu
+    @FindBy(xpath = "//*[@placeholder='Search']")
+    public WebElement attCookRefMenuSearchBox;
+
+    //Attributes-Cooking Reference sayfasindaki Arama Butonu
+    @FindBy(xpath = "//*[@class='submit input-group-text border-0 ml-2 normal']")
+    public WebElement attCookRefMenuSearchButton;
+
+    //Attributes-Cooking Reference sayfasindaki Tablonun # basligi
+    @FindBy(xpath = "//th[1]")
+    public WebElement attCookRefNumberTableHead;
+
+    //Attributes-Cooking Reference sayfasindaki Tablonun Name basligi
+    @FindBy(xpath = "//th[2]")
+    public WebElement attCookRefNameTableHead;
+
+    //Attributes-Cooking Reference sayfasindaki Tablonun Actions basligi
+    @FindBy(xpath = "//th[3]")
+    public WebElement attCookRefActionsTableHead;
+
+    //Attributes-Cooking Reference sayfasindaki tum Edit Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Update']")
+    public List<WebElement> attCookRefEditButtons;
+
+    //Attributes-Cooking Reference sayfasindaki tum Delete Butonlari Listesi
+    @FindBy(xpath = "//*[@data-original-title='Delete']")
+    public List<WebElement> attCookRefDeleteButtons;
+
+    //Order Type Menu
+    @FindBy(xpath = "//*[@class='food']")
+    public WebElement orderTypeMenu;
+
+    //Order Type Altindaki Delivery Menu
+    @FindBy(xpath = "//*[@class='position-relative services_delivery_settings active']")
+    public WebElement orderTypeDeliveryMenu;
+
+    //Order Type - Delivery sayfasindaki Settings butonu
+    @FindBy(xpath = "//ul[@id='yw0']/li[@class='active']")
+    public WebElement oTDeliveryMenuSettingsButton;
+
+    //Order Type - Delivery - Enabled Opt in for no contact delivery Switch
+    @FindBy(xpath = "//*[@for='merchant_opt_contact_delivery']")
+    public WebElement oTDeliveryMenuSwitch1;
+
+    //Order Type - Delivery - Free Delivery on First Order Switch
+    @FindBy(xpath = "//*[@for='free_delivery_on_first_order']")
+    public WebElement oTDeliveryMenuSwitch2;
+
+    //Order Type - Delivery - Settings - Save Button
+    @FindBy(xpath = "//*[@value='Save']")
+    public WebElement oTDeliveryMenuSaveButton;
+
+    //Order Type - Delivery sayfasindaki Fixed Charge butonu
+    @FindBy(xpath = "//*[@class='zmdi zmdi-time-countdown']")
+    public WebElement oTDeliveryMenuFixedChargeButton;
+
+    //Order Type - Delivery - Fixed Charge - Price Kutucugu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_distance_price']")
+    public WebElement oTDeliveryMenuFixedChargePriceBox;
+
+    //Order Type - Delivery - Fixed Charge - Delivery Estimation Kutucugu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_estimation']")
+    public WebElement oTDeliveryMenuFixedChargeDeliveryEstBox;
+
+    //Order Type - Delivery - Fixed Charge - Minimum Order Kutucugu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_minimum_order']")
+    public WebElement oTDeliveryMenuFixedChargeMinOrderBox;
+
+    //Order Type - Delivery - Fixed Charge - Maximum Order Kutucugu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_maximum_order']")
+    public WebElement oTDeliveryMenuFixedChargeMaxOrderBox;
+
+    //Order Type - Delivery - Fixed Charge - Save Butonu
+    @FindBy(xpath = "//*[@value='Save']")
+    public WebElement oTDeliveryMenuFixedChargeSaveButton;
+
+    //Order Type Altindaki Pickup Menu
+    @FindBy(xpath = "//*[@class='position-relative services_settings_pickup active']")
+    public WebElement orderTypePickupMenu;
+
+    //Order Type -Pickup sayfasindaki Settings butonu
+    @FindBy(xpath = "//ul[@id='yw0']/li[@class='active']/a")
+    public WebElement oTPickupMenuSettingsButton;
+
+    //Order Type - Pickup - Settings - Pickup Estimation Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_estimation']")
+    public WebElement oTPickupMenuSettingsPickupEstimation;
+
+    //Order Type - Pickup - Settings - Minimum Order Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_minimum_order']")
+    public WebElement oTPickupMenuSettingsMinOrder;
+
+    //Order Type - Pickup - Settings - Maximum Order Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_maximum_order']")
+    public WebElement oTPickupMenuSettingsMaxOrder;
+
+    //Order Type - Pickup - Settings - Save Butonu
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement oTPickupMenuSettingsSaveButton;
+
+    //Order Type Altindaki Dinein Menu
+    @FindBy(xpath = "//*[@class='position-relative services_settings_dinein active']")
+    public WebElement orderTypeDineinMenu;
+
+    //Order Type -Dinein sayfasindaki Settings butonu
+    @FindBy(xpath = "//ul[@id='yw0']/li[@class='active']/a")
+    public WebElement oTDineinMenuSettingsButton;
+
+    //Order Type - Dinein - Settings - Dinein Estimation Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_estimation']")
+    public WebElement oTDineinMenuSettingsPickupEstimation;
+
+    //Order Type - Dinein - Settings - Minimum Order Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_minimum_order']")
+    public WebElement oTDineinMenuSettingsMinOrder;
+
+    //Order Type - Dinein - Settings - Maximum Order Kutusu
+    @FindBy(xpath = "//*[@id='AR_shipping_rate_maximum_order']")
+    public WebElement oTDineinMenuSettingsMaxOrder;
+
+    //Order Type - Dinein - Settings - Save Butonu
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement oTDineinMenuSettingsSaveButton;
+
+    //Images Menu
+    @FindBy(xpath = "//*[@class='merchant_images']")
+    public WebElement imagesMenu;
+
+    //Images altindaki Gallery Menu
+    @FindBy(xpath = "//*[@class='position-relative images_gallery']")
+    public WebElement imagesGalleryMenu;
+
+    //Images - Gallery - Browse Button
+    @FindBy(xpath = "//*[@class='btn btn-info']")
+    public WebElement imagesGalleryBrowseButton;
+
+    //Images - Gallery - Save Button
+    @FindBy(xpath = "//*[@value='Save']")
+    public WebElement imagesGallerySaveButton;
+
+    //Images - Media Library Menusu
+    @FindBy(xpath = "//*[@class='position-relative images_media_library']")
+    public WebElement imagesMediaLibraryMenu;
+
+    //Users Menu
+    @FindBy(xpath = "//*[@class='merchan_user']")
+    public WebElement usersMenu;
+
+    //Users - All User Menu
+    @FindBy(xpath = "//*[@class='position-relative usermerchant_user_list']")
+    public WebElement usersAllUserMenu;
+
+    //Users - All User Add New Button
+    @FindBy(xpath = "//*[@class='btn btn-black btn-circle']")
+    public WebElement usersAllUserMenuAddNewButton;
+
+    //Users - All User Search Box
+    @FindBy(xpath = "//*[@type='search']")
+    public WebElement usersAllUserMenuSearchBox;
+
+    //Users - All User Search Button
+    @FindBy(xpath = "//*[@class='submit input-group-text border-0 ml-2 normal']")
+    public WebElement usersAllUserMenuSearchButton;
+
+    //Users - All User Menu Tablodaki Name Basligi
+    @FindBy(xpath = "//th[@class='sorting'][2]")
+    public WebElement usersAllUserMenuTableNameHeader;
+
+    //Users - All User sayfasindaki tum Edit Butonlari Listesi
+    @FindBy(xpath = "//*[@class='btn btn-light tool_tips']")
+    public List<WebElement> usersAllUserMenuEditButtonsList;
+
+    //Users - All User sayfasindaki tum Delete Butonlari Listesi
+    @FindBy(xpath = "//*[@class='btn btn-light datatables_delete tool_tips']")
+    public List<WebElement> usersAllUserMenuDeleteButtonsList;
+
+    //Merchant Dashboard - Ustte bulunan 4 bolumluk gorsel
+    @FindBy(xpath = "//*[@class='row m-0 p-0']")
+    public WebElement merchantSummaryOne;
+
+    //Merchant Dashboard - Ustte bulunan 4 bolumdeki sadece sayilar List olarak
+    @FindBy(xpath = "//div[@class='report-inner']/p")
+    public List<WebElement> merchantSummaryOneDataList;
+
+    //Merchant Dashboard - ikinci bolum, (sales, earnings, balance)
+    @FindBy(xpath = "//div[@class='position-relative mb-3']/div[@class='row']")
+    public WebElement merchantSummaryTwo;
+
+    //Merchant Dashboard - ikinci bolum, (sales, earnings, balance) sadece sayilar list olarak
+    @FindBy(xpath = "//*[@class='m-0 position-relative']")
+    public List<WebElement> merchantSummaryTwoDataList;
+
+    //Merchant Dashboard - ucuncu bolum, (orders received, today delievered, today sales, today refund)
+    @FindBy(xpath = "//div[@class='col-lg-8 mb-3 mb-xl-0']/div[@class='dashboard-statistic position-relative mb-3']")
+    public WebElement merchantSummaryThree;
+
+    //Merchant Dashboard - ucuncu bolum, (orders received, today delievered, today sales, today refund) sadece sayilar list olarak
+    @FindBy(xpath = "//h3")
+    public List<WebElement> merchantSummaryThreeDataList;
+
+    //Merchant Dashboard - dorduncu bolum grafik (Sales Overview)
+    @FindBy(xpath = "//*[@class='highcharts-background']")
+    public WebElement merchantSummaryFour;
+
+    //Merchant Dasboard sag altta bulunan Overview of Reviews deki Checkout all reviews butonu
+    @FindBy(xpath = "//*[@href='https://qa.flavorfetch.com/backoffice/customer/reviews']")
+    public WebElement merchantOverviewOfReviewCheckAllReviewsButton;
+=======
 //Merchant Login sayfasindaki Username kutucugu
 @FindBy(xpath = "//*[@placeholder='Username']")
 public WebElement merchantLoginUsername;
@@ -1241,6 +1569,7 @@ public WebElement merchantSummaryFour;
 //Merchant Dasboard sag altta bulunan Overview of Reviews deki Checkout all reviews butonu
 @FindBy(xpath = "//*[@href='https://qa.flavorfetch.com/backoffice/customer/reviews']")
 public WebElement merchantOverviewOfReviewCheckAllReviewsButton;
+>>>>>>> main
 
 
 }

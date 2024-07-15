@@ -1,71 +1,183 @@
 package tests;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
-import java.time.Duration;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.merchantPage;
+import utilities.ConfigReader;
+import utilities.Driver;
+
+import java.security.PublicKey;
 
 public class US_23 {
 
-    WebDriver driver;
+    merchantPage merchantPage = new merchantPage();
 
-    // tek test method'u oldugu icin @BeforeMethod veya @BeforeClass kullanabiliriz
-    @BeforeClass
-    public void setup(){
+    @Test
+    public void TC_2301(){
 
-        WebDriverManager.chromedriver().setup();
-        // sirket bize bir WebDriver verirse onu kullaniriz
-        // yoksa Selenium'un kendi WebDriver'ini kullanabiliriz
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+        Driver getDriver().get(ConfigReader.getProperty("merchant_Url"));
+        merchantPage.MerchantLoginName.sendKeys(ConfigReader.getProperty("merchant_username"));
+        merchantPage.MerchantLoginPassword.sendKeys(ConfigReader.getProperty("merchant_Password"));
+        merchantPage.MerchantSignInButton.click();
+        //Total Orders\Total Cancel\Total refund\Total Sales ve değerleri güncel olduğu gözlemlenir,
 
-    @AfterClass
-    public void teardown(){
-        driver.quit();
+
+
+        //Commission this week\ Commission this month\ Subscriptions this month ve değerleri güncel olduğu gözlemlenir,
+
+
+
+
+        //Order received\Today delivered\Today sales\Today refund ve değerleri güncel olduğu gözlemlenir,
+
+
+
+
+        // header >dropdown > logout tuşuna basılır,
+
+
+
     }
 
     @Test
-    public void test01(){
+    public void TC_2302(){
 
-        // anasayfaya gidelim
-        driver.get("https://qa.flavorfetch.com/");
-
-        // anasayfadan sign in e tıklayıp login sayfasını göreceğiz
-        WebElement loginsignIn = driver.findElement(By.xpath("//a[normalize-space()='Sign in']"));
-        // WebElement.click (driver.findElement(By.xpath("//a[normalize-space()='Sign in']")));
-        loginsignIn.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        WebElement loginName = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/div/form/div[1]/input"));
-        loginName.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        //loginName.sendKeys("gozdegokdeniz@flavorfetch.com");
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+        Driver getDriver().get(ConfigReader.getProperty("merchant_Url"));
+        merchantPage.MerchantLoginName.sendKeys(ConfigReader.getProperty("merchant_username"));
+        merchantPage.MerchantLoginPassword.sendKeys(ConfigReader.getProperty("merchant_Password"));
+        merchantPage.MerchantSignInButton.click();
+       //All Last Orders panelinden view butonuna tıklanır,
 
 
-        WebElement loginPassword = driver.findElement(By.xpath("//label[@for='password']"));
-        loginPassword .click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        loginPassword.sendKeys("Flavor.2106");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        //header >dropdown > logout tuşuna basılır,
 
 
-        WebElement SingIn = driver.findElement(By.xpath("//div[@id='vue-login']//form"));
-        SingIn.click();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+    }
+
+    @Test
+    public void TC_2303(){
+
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+        Driver getDriver().get(ConfigReader.getProperty("merchant_Url"));
+        // Processing tıklanır,
+        // Processing Last Orders panelinden view butonuna tıklanır,
+
+
+
+        // Adres incelenir, "Assign Driver" butonuna basılır,
+
+
+
+
+        //header >dropdown > logout tuşuna basılır,
+
+    }
+
+    @Test
+    public void TC_2304(){
+
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+        Driver getDriver().get(ConfigReader.getProperty("merchant_Url"));
+
+        // Ready tıklanır,
+
+
+
+        //Ready Last Orders panelinden OrderID tıklanır,
+
+
+
+        // "Delivered" butonuna basılır,
+
+
+
+        //geri butonuna basılır
+
+
+
+        //Ready tıklanır,
+
+
+
+        //header >dropdown > logout tuşuna basılır,
+
+    }
+
+    @Test
+    public void TC_2305(){
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+        Driver getDriver().get(ConfigReader.getProperty("merchant_Url"));
+
+        // Completed tıklanır,
+
+
+
+        //Completed Last Orders panelinden OrderID tıklanır,
+
+
+
+
+        // "..." dropdown basılır,
+
+
+
+        // "Timeline" tıklanır,
+
+
+
+        //header >dropdown > logout tuşuna basılır,
+
+
+    }
+
+
+    @Test
+    public void TC_2306(){
+
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+
+        // Popüler items ürün kaç kere sipariş verilmiş incelenir,
+
+
+
+        // header >dropdown > logout tuşuna basılır,
+
+    }
+
+    @Test
+    public void TC_2307(){
+
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+
+        // Last 30 days sales tıklanır,
+
+
+
+        // son 30 gün içinde ürün kaç kere sipariş verilmiş incelenir,
+
+
+
+
+        // header >dropdown > logout tuşuna basılır,
+
+    }
+
+    @Test
+    public void TC_2308(){
+        // username ve password alanına datalar girilir. Sign in butonuna basılır.
+
+        //Top Customers alanında kullanıcı isme tıklanır,
+
+
+
+
+        //header >dropdown > logout tuşuna basılır,
 
 
     }
