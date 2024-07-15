@@ -1,11 +1,7 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.merchantPage;
-import utilities.ConfigReader;
-import utilities.Driver;
 
 public class US_022 {
 
