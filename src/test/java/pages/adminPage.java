@@ -138,13 +138,4 @@ public class adminPage {
 
     //xaver end
 
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> main
 }
