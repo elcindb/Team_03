@@ -1,13 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
-import pages.merchantPage;
-import utilities.ConfigReader;
-import utilities.Driver;
 
 public class US_28 {
 
     merchantPage merchantPage = new merchantPage();
+
 
     @Test
     public void TC_2801(){
