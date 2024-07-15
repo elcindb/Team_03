@@ -502,7 +502,7 @@ public class merchantPage {
 
         //>>Sidebar Merchant Relative Order Limit Menu
         @FindBy(xpath = "position-relative merchant_time_management")
-        public WebElement merchOrderLimitMenu;
+        public WebElement merchOrderLimitMenusu;
 
     // Items Name Coloumn
     @FindBy(xpath = "//tr//td[3]")
@@ -520,8 +520,24 @@ public class merchantPage {
 
         //>>Sidebar Merchant Relative Menu Menu
         @FindBy(xpath = "//li[@class='position-relative merchant_pages_menu']")
-        public WebElement merchMenuMenu;
+        public WebElement merchMenuMenuu;
 //> Relative Information Login  Menu
+
+    //Merchant Login
+
+ //Relative Information Login Profil Resim ve Linki (dropdown)
+ @FindBy(xpath = "(//*[@class='btn btn-sm dropdown-toggle text-truncate'])[1]")
+ public WebElement merchantinformationloginProfilResimveLinkiDropdown;
+
+ //Relative Information Login Profil Linki
+ @FindBy(xpath = "(//*[text()=' Profile '])[1]")
+ public WebElement merchantinformationloginProfilLinki;
+
+ //Relative Information Login Logout
+ @FindBy(xpath = "(//*[text()=' Logout '])[1]")
+ public WebElement merchantinformationloginProfilLogout;
+
+
 
     //Relative Information Login First Name Textbox
     @FindBy(xpath = "//*[@name='AR_merchant_user[first_name]']")

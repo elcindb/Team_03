@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class userPage {
-    public userPage(){
+public class UserPage {
+    public UserPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -19,8 +19,8 @@ public class userPage {
     public WebElement UserSignIn;
 
     // User sayfasındaki Mobile number or email
-    @FindBy(xpath = "(//*[@class='required'])[1]")
-    public WebElement UserName;
+    @FindBy(xpath = "//*[@FOR='username']")
+    public WebElement userName;
 
     // User sayfasındaki Password
     @FindBy(xpath = "(//*[@class='required'])[2]")
