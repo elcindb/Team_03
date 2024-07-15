@@ -137,5 +137,4 @@ public class adminPage {
     public WebElement NextButton;
 
     //xaver end
-
 }

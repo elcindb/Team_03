@@ -1217,5 +1217,4 @@ public class merchantPage {
     public List<WebElement> itemsDeleteColoumn;
 
 
-
 }
