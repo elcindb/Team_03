@@ -10,9 +10,9 @@ import java.util.List;
 public class userPage {
 
     public userPage(){
-    PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
 
-}
+    }
     // user sayfasındakı flavor fetch logosunun xpath
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement userlogo;
