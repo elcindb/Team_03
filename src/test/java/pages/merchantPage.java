@@ -1216,5 +1216,23 @@ public class merchantPage {
     @FindBy(xpath = "//tr//td[6]//a[2]")
     public List<WebElement> itemsDeleteColoumn;
 
+    //-------SONRADAN EKLENENLER
+
+    @FindBy(xpath = "(//*[text()='Update Category'])[2]")
+    public WebElement updateCategoryLabel;
+    @FindBy(xpath = "//a[@class='btn btn-green item_delete']")
+    public WebElement deleteOnayKabulButton;
+
+    @FindBy(xpath = "//*[@class='form-control rounded search w-25']")
+    public WebElement categorySearchBox;
+
+    // MerchAdmin Profile DropDown
+    @FindBy(xpath = "(//*[@id='dropdownMenuLink'])[1]")
+    public WebElement profileDropdown;
+
+    // MerchAdminLogout
+    @FindBy(xpath = "(//*[text()=' Logout '])[1]")
+    public WebElement logOutButton;
+
 
 }
