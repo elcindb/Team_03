@@ -137,4 +137,90 @@ public class adminPage {
     public WebElement NextButton;
 
     //xaver end
+
+
+//--------------------------//
+    //Mahmut Starts
+    
+    //admin login sayfası baslangıc
+    @FindBy(xpath = "//*[@for='LoginForm_username']")
+    public WebElement UserNameTextBox;
+
+    @FindBy (xpath = "//*[@for='LoginForm_password']")
+    public WebElement PasswordTextBox;
+
+    @FindBy(xpath = "//*[@for='LoginForm_rememberMe']")
+    public WebElement RememberMeButton;
+
+    @FindBy(xpath = "//*[@class='dim underline']")
+    public WebElement ForgotPasswordButton;
+
+
+    @FindBy(xpath = "//*[@class='btn btn-green btn-full']")
+    public WebElement SignInButton;
+
+    @FindBy(xpath = "//*[@src='/backoffice/themes/classic/assets/images/app-store@2x.png']")
+    public WebElement AppStoreLink;
+
+    @FindBy(xpath = "//*[@src='/backoffice/themes/classic/assets/images/google-play@2x.png']")
+    public WebElement PlayStoreLink;
+    
+    //admin login bitiş------
+    
+    //admin dashboard 
+
+    @FindBy(xpath = "//*[@href='/backoffice/promo/coupon']")
+    public WebElement CouponLink;
+
+    @FindBy(xpath = "//*[@href='/backoffice/promo/coupon_create']")
+    public WebElement AddNewButton;
+
+    @FindBy(xpath = "//*[@class='form-control rounded search w-25']")
+    public WebElement SearchTextBox;
+
+    @FindBy(xpath = "//*[@class='submit input-group-text border-0 ml-2 normal']")
+    public WebElement SearchButton;
+
+    @FindBy(xpath = "//*[@style='width: 408px;']")
+    public WebElement NameButton;
+
+    @FindBy(xpath = "//*[@style='width: 260px;']")
+    public WebElement UsedButton;
+
+    @FindBy(xpath = "//*[@style='width: 186px;']")
+    public WebElement ActionsButton;
+
+    //Coupon Olusturma Sayfası
+    @FindBy(xpath = "//*[@href='/backoffice/promo/coupon'][1]")
+    public WebElement AllCouponLink;
+
+    @FindBy(xpath = "//*[@for='AR_voucher_voucher_name']")
+    public WebElement CouponNameTextBox;
+
+    @FindBy(xpath = "//select[@id='AR_voucher_voucher_type']")
+    public WebElement DropdownCouponType;
+
+    @FindBy(xpath = "//*[@for='AR_voucher_amount']")
+    public WebElement AmountTextBox;
+
+    @FindBy(xpath = "//*[@for='AR_voucher_min_order']")
+    public WebElement MinOrderTextBox;
+
+    @FindBy(xpath = "//select[@class='form-control custom-select form-control-select select_two select2-hidden-accessible']")
+    public WebElement DropDownDaysAvalable;
+
+    @FindBy(xpath = "//select[@class='form-control custom-select form-control-select select_two_ajax select2-hidden-accessible']")
+    public WebElement DropDownApplicableToMerchant;
+
+    @FindBy(xpath = "//*[@for='AR_voucher_expiration']")
+    public WebElement ExpirationDate;
+
+    @FindBy(xpath = "//select[@class='form-control custom-select form-control-select coupon_options']")
+    public WebElement CouponOptionsDropDownMenu;
+
+    @FindBy(xpath = "//select[@id='AR_voucher_status']")
+    public WebElement StatusDropDownMenu;
+
+    @FindBy(xpath = "//*[@class='btn btn-green btn-full mt-3']")
+    public WebElement SaveButton;
 }
