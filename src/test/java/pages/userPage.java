@@ -211,70 +211,70 @@ public class userPage {
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement headerLogo;
 
-    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-facebook']")
+    @FindBy(xpath = "(//a[@class='facebook'])[1]")
     public WebElement facebookButton;
 
-    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-instagram']")
+    @FindBy(xpath = "(//a[@class='instagram'])[1]")
     public WebElement instagramButton;
 
-    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-linkedin']")
+    @FindBy(xpath = "(//a[@class='linkedin'])[1]")
     public WebElement linkedinButton;
 
-    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-twitter']")
+    @FindBy(xpath = "(//a[@class='twitter'])[1]")
     public WebElement twitterButton;
 
-    @FindBy(xpath = "//*div[@class = 'zmdi zmdi-youtube-play']")
+    @FindBy(xpath = "(//a[@class='youtube'])[1]")
     public WebElement youtubeButton;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][1]")
     public WebElement fastfoodBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][2]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][2]")
     public WebElement pizzaBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][3]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][3]")
     public WebElement sandwichesAndWrapsBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][4]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][4]")
     public WebElement italianBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][5]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][5]")
     public WebElement soupsAndStewsBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][6]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][6]")
     public WebElement japaneseBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][7]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][7]")
     public WebElement dessertAndSnacksBox;
 
-    @FindBy(xpath = "//*div[@id= 'col cuisineMainPage'][8]")
+    @FindBy(xpath = "//div[@class='col cuisineMainPage'][8]")
     public WebElement chineseButton;
 
-    @FindBy( xpath= "//*div[@id = 'owl-carousel-nav prev mr-4']")
+    @FindBy( xpath= "(//*[@class=\"owl-carousel-nav prev mr-4\"])[1]")
     public WebElement oncekiButton;
 
-    @FindBy( xpath= "//*[@class = 'owl-carousel-nav next mr-4']")
+    @FindBy (xpath = "(//*[@class=\"owl-carousel-nav next\"])[1]")
     public WebElement sonrakiButton;
 
-    @FindBy (xpath = "//*div[@id = 'Team3']")
+    @FindBy (xpath = "(//*[@href=\"https://qa.flavorfetch.com/team-3\"])[3]")
     public WebElement team3Box;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][1]")
+    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
     public WebElement iskenderAddCart;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][3]")
+    @FindBy (xpath = "//a[@class='btn btn-grey xget-item-details'])[2]")
     public WebElement pizzaAddCart;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][4]")
+    @FindBy (xpath = "(//div[@class='position-relative quantity-wrapper'])[2]")
     public WebElement hamburgerAddCart;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-grey xget-item-details'][5]")
+    @FindBy (xpath = "//a[@class='btn btn-grey xget-item-details'])[3]")
     public WebElement mozarellaSticksAddCart;
 
-    @FindBy (xpath = "//*div[@class = 'zmdi zmdi-minus']")
+    @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[3]")
     public WebElement eksiButton;
 
-    @FindBy (xpath = "//*div[@class = 'zmdi zmd-plus']")
+    @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[4]")
     public WebElement artiButton;
 
     @FindBy (xpath = "//*div[@class = 'btn btn-green add_to_cart']")
@@ -286,6 +286,20 @@ public class userPage {
     @FindBy (xpath = "//*div[@class = 'mr-1']")
     public WebElement cashpaymentButton;
 
-    @FindBy (xpath = "//*div [@class = 'btn btn-green w-100']" )
+    @FindBy (xpath = "//*div[@class = 'btn btn-green w-100']" )
     public WebElement addCashButton;
+
+    @FindBy (xpath = "(//li[@class='position-relative'])[1]")
+    public WebElement contactUsButton;
+
+    @FindBy (xpath = "//li[@class='position-relative'][2]")
+    public WebElement termsAndConditionsButton;
+
+    @FindBy (xpath = "(//li[@class='position-relative '])[3]")
+    public WebElement privacyPolicyButton;
+
+
+
+
+
 }
