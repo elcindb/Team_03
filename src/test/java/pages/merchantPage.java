@@ -525,19 +525,6 @@ public class merchantPage {
 
     //Merchant Login
 
- //Relative Information Login Profil Resim ve Linki (dropdown)
- @FindBy(xpath = "(//*[@class='btn btn-sm dropdown-toggle text-truncate'])[1]")
- public WebElement merchantinformationloginProfilResimveLinkiDropdown;
-
- //Relative Information Login Profil Linki
- @FindBy(xpath = "(//*[text()=' Profile '])[1]")
- public WebElement merchantinformationloginProfilLinki;
-
- //Relative Information Login Logout
- @FindBy(xpath = "(//*[text()=' Logout '])[1]")
- public WebElement merchantinformationloginProfilLogout;
-
-
 
     //Relative Information Login First Name Textbox
     @FindBy(xpath = "//*[@name='AR_merchant_user[first_name]']")
@@ -952,6 +939,18 @@ public class merchantPage {
     // Items Delete Coloumn
     @FindBy(xpath = "//tr//td[6]//a[2]")
     public List<WebElement> itemsDeleteColoumn;
+
+    //Relative Information Login Profil Resim ve Linki (dropdown)
+    @FindBy(xpath = "(//*[@class='btn btn-sm dropdown-toggle text-truncate'])[1]")
+    public WebElement merchantinformationloginProfilResimveLinkiDropdown;
+
+    //Relative Information Login Profil Linki
+    @FindBy(xpath = "(//*[text()=' Profile '])[1]")
+    public WebElement merchantinformationloginProfilLinki;
+
+    //Relative Information Login Logout
+    @FindBy(xpath = "(//*[text()=' Logout '])[1]")
+    public WebElement merchantinformationloginProfilLogout;
 
 }
 

@@ -19,11 +19,11 @@ public class UserPage {
     public WebElement UserSignIn;
 
     // User sayfasındaki Mobile number or email
-    @FindBy(xpath = "//*[@FOR='username']")
+    @FindBy(xpath = "//*[@id='username']")
     public WebElement userName;
 
     // User sayfasındaki Password
-    @FindBy(xpath = "(//*[@class='required'])[2]")
+    @FindBy(xpath = "//*[@id='password']git ")
     public WebElement UserPassword;
 
     // user sayfasında login olmak için Sign in butonu
@@ -207,5 +207,13 @@ public class UserPage {
     public WebElement UserChooseDeliveryAddress;
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement headerLogo;
+
+    @FindBy(xpath = "//*[@class='zmdi zmdi-eye']")
+    public WebElement visiblePassword;
+
+    @FindBy(xpath = "//*[@for='rememberme']")
+    public WebElement rememberMeCheckbox;
+
+
 
 }
