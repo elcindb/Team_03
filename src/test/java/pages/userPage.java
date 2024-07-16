@@ -292,7 +292,7 @@ public class userPage {
     @FindBy (xpath = "(//li[@class='position-relative'])[1]")
     public WebElement contactUsButton;
 
-    @FindBy (xpath = "//*[@href="https://qa.flavorfetch.com/terms-and-conditions"]")
+    @FindBy (xpath = "//*[@href='https://qa.flavorfetch.com/terms-and-conditions']")
     public WebElement termsAndConditionsButton;
 
     @FindBy (xpath = "(//li[@class='position-relative '])[3]")
