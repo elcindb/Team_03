@@ -295,6 +295,9 @@ public class userPage {
     @FindBy (xpath = "//*[@href='https://qa.flavorfetch.com/terms-and-conditions']")
     public WebElement termsAndConditionsButton;
 
+    @FindBy (xpath = "(//div[@class='text-left'])[2]")
+    public WebElement termsAndConditionsContentText;
+
     @FindBy (xpath = "(//li[@class='position-relative '])[3]")
     public WebElement privacyPolicyButton;
 
