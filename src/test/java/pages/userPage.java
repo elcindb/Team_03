@@ -262,13 +262,13 @@ public class userPage {
     @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
     public WebElement iskenderAddCart;
 
-    @FindBy (xpath = "//a[@class='btn btn-grey xget-item-details'])[2]")
+    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
     public WebElement pizzaAddCart;
 
     @FindBy (xpath = "(//div[@class='position-relative quantity-wrapper'])[2]")
     public WebElement hamburgerAddCart;
 
-    @FindBy (xpath = "//a[@class='btn btn-grey xget-item-details'])[3]")
+    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[3]")
     public WebElement mozarellaSticksAddCart;
 
     @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[3]")
@@ -277,8 +277,8 @@ public class userPage {
     @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[4]")
     public WebElement artiButton;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-green add_to_cart']")
-    public WebElement addToCartButton;
+    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
+    public WebElement addToCartIskenderButton;
 
     @FindBy (xpath = "//*div[@class = 'btn btn-green w-100 pointer d-flex justify-content-between']")
     public WebElement checkOutButton;
@@ -297,6 +297,69 @@ public class userPage {
 
     @FindBy (xpath = "(//li[@class='position-relative '])[3]")
     public WebElement privacyPolicyButton;
+
+    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
+    public WebElement addToCartoMozarellaButton;
+
+    @FindBy(xpath = "//*[@href=\"https://qa.flavorfetch.com/merchant/signup\"]")
+    public WebElement becomeAPartnerButton;
+
+    //Food Lists..
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[1]")
+    public WebElement havanaSandwichPage;
+
+    @FindBy (xpath = "(//div[@class='position-relative']/a[1])[2]")
+    public WebElement dolanUyghurPage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[3]")
+    public WebElement krispyKremePage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[4]")
+    public WebElement redrosePage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[5]")
+    public WebElement foodyPizzaPage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[6]")
+    public WebElement sushiNationPage;
+
+    @FindBy(xpath = ("(//div[@class='position-relative']/a[1])[7]"))
+    public WebElement team3Page;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[8]")
+    public WebElement burgerVillagePage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[9]")
+    public WebElement oceanaireSeafoodPage;
+
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[10]")
+    public WebElement team1Page;
+
+    @FindBy(xpath = "(//a[@class='rounded-pill qty-btn'])[2]")
+    public WebElement cartSummaryPlusButton;
+
+    @FindBy(xpath = "(//a[@class='rounded-pill qty-btn'])[3]")
+    public WebElement cartSummaryMinusButton;
+
+    @FindBy(xpath = "/a[@class='rounded-pill item-remove ml-auto mb-1']")
+    public WebElement removeCartButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-green w-100 pointer']")
+    public WebElement placeOrderButton;
+
+    @FindBy(xpath = "//textarea[@class='form-control form-control-text font13']")
+    public WebElement noteTextBox;
+
+    @FindBy(xpath = "//div[@class='flex-fill pl-2']")
+    public WebElement confirmingOrderRestoranPage;
+
+    @FindBy(xpath = "//div[@class='mt-2']/a[@class='btn btn-circle btn-white border mr-2']")
+    public WebElement callButton;
+
+    @FindBy(xpath = "//div[@class='mt-2']/a[@class='btn btn-circle btn-white border']")
+    public WebElement navigateButton;
+
+
 
 
 
