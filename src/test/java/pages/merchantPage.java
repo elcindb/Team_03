@@ -1234,5 +1234,8 @@ public class merchantPage {
     @FindBy(xpath = "(//*[text()=' Logout '])[1]")
     public WebElement logOutButton;
 
-
+    //Food Items Search Box
+    @FindBy(xpath = "//*[@class='form-control form-control-sm']")
+    public WebElement foodItemsSearchBox;
+    
 }
