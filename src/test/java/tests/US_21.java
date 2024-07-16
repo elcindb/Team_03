@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.merchLoginPage;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;

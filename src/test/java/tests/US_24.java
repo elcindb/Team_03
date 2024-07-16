@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.merchLoginPage;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
