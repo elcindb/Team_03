@@ -23,7 +23,7 @@ public class UserPage {
     public WebElement userName;
 
     // User sayfasındaki Password
-    @FindBy(xpath = "//*[@id='password']git ")
+    @FindBy(xpath = "//*[@id='password']")
     public WebElement UserPassword;
 
     // user sayfasında login olmak için Sign in butonu
