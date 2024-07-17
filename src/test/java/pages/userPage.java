@@ -362,6 +362,29 @@ public class userPage {
     @FindBy(xpath = "//div[@class='mt-2']/a[@class='btn btn-circle btn-white border']")
     public WebElement navigateButton;
 
+    //--- Eklenenler Burhan
+
+    // Kaydedilen restorant listesi
+    @FindBy(xpath = "//*[@class='col-lg-3 mb-3 col-md-6']")
+    public List<WebElement> savedShopList;
+
+    // Dükkanı Saved Stores sayfasına eklemek için kalp butonu
+    @FindBy(xpath = "(//i[@class='zmdi zmdi-favorite-outline'])[1]")
+    public WebElement saveShoptoSavedStores;
+
+    //Dükkanı Saved Stores sayfasından çıkarmak için kalp butonu
+    @FindBy(xpath = "(//i[@class='zmdi zmdi-favorite text-green'])[1]")
+    public  WebElement removeShoptoSavedStore;
+
+    //
+    @FindBy(xpath = "(//*[@href=\"https://qa.flavorfetch.com/oceanaire-seafood\"])[1]")
+    public WebElement oceanaireShopLink;
+
+    // Dükkan ismi
+    @FindBy(xpath = "(//*[@class='w-50 align-self-center'])[1]")
+    public WebElement shopName;
+
+
 
 
 

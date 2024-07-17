@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.merchLoginPage;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -51,6 +52,7 @@ public class US_21 {
     @Test
     public void TC_21_002() {
 
+        merchLoginPage merchLoginPage = new merchLoginPage();
         merchantPage merchantPage = new merchantPage();
 
         // Restaurant yöneticisi browser açar

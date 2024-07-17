@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.merchLoginPage;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -19,7 +20,7 @@ public class US_24 {
 
     @Test
     public void TC_24_001() {
-
+        merchLoginPage merchLoginPage = new merchLoginPage();
         merchantPage merchantPage = new merchantPage();
 
         //Restaurant yöneticisi browser açar
@@ -47,8 +48,8 @@ public class US_24 {
         Assert.assertTrue(isCategoryActionDisplayed);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        merchLoginPage.profileDropdown.click();
+        merchLoginPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -58,6 +59,7 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
+        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -65,7 +67,6 @@ public class US_24 {
         merchantPage.merchantLoginPassword.sendKeys(ConfigReader.getProperty("merchantPassword"));
         merchantPage.merchantLoginButton.click();
         ReusableMethods.wait(2);
-
 
         // "Dashboard" menüsünün altındaki "Food" menüsüne tıklar
         merchantPage.foodMenu.click();
@@ -116,8 +117,8 @@ public class US_24 {
         Assert.assertTrue(isNewCategoryHere);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        merchLoginPage.profileDropdown.click();
+        merchLoginPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -130,6 +131,7 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
+        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -169,8 +171,8 @@ public class US_24 {
         Assert.assertTrue(merchantPage.categoryNameColoumn.get(0).getText().contains(expectedUpdatedCategoryName));
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        merchLoginPage.profileDropdown.click();
+        merchLoginPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -181,7 +183,7 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
-
+        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -197,7 +199,6 @@ public class US_24 {
         merchantPage.categoryMenu.click();
 
         int mevcutKategoriSayisi = merchantPage.categoryNameColoumn.size();
-        System.out.println("Silinmeden önce " + mevcutKategoriSayisi);
 
         // Açılan sayfadaki kategori isminin sağ tarafındaki "Delete" butonuna basar
         merchantPage.categoryDeleteButtonColoumn.get(0).click();
@@ -213,18 +214,13 @@ public class US_24 {
         merchantPage.foodMenu.click();
         merchantPage.categoryMenu.click();
 
-        System.out.println(mevcutKategoriSayisi);
-        System.out.println(merchantPage.categoryNameColoumn.size());
-
         // İşlem yaptığı kategorinin isminin kategori listesinde olmadığını kontrol eder
         Assert.assertTrue(merchantPage.categoryNameColoumn.size() + 1 == mevcutKategoriSayisi);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
-
+        merchLoginPage.profileDropdown.click();
+        merchLoginPage.logOutButton.click();
         Driver.closeDriver();
-
     }
 
     @Test
@@ -232,6 +228,7 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
+        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -247,18 +244,29 @@ public class US_24 {
         merchantPage.categoryMenu.click();
 
         // Sağ üst köşedeki searchBox' a istenen kategori ismini yazıp Enter' a basar
-
-        System.out.println("Aramadan önce " + merchantPage.categoryNameColoumn.size());
-
-        String expectedCategoryName = "Wings & Appetizers";
+        String expectedCategoryName = "WHOPPER";
         merchantPage.categorySearchBox.sendKeys(expectedCategoryName + Keys.ENTER);
-
+        ReusableMethods.wait(2);
         List<WebElement> aramaSonrasıMenuSayisi = Driver.getDriver().findElements(By.xpath("//td[2]"));
-        System.out.println(aramaSonrasıMenuSayisi.size());
 
-        System.out.println("Aramadan önce " + merchantPage.categoryNameColoumn.size());
 
         // Gelen sayfadaki kategorinin aradığı kategori olduğunu doğrular
 
+        boolean arananKategoriVarMi = false;
+
+        for (int i = 0; i < aramaSonrasıMenuSayisi.size(); i++) {
+
+            if (aramaSonrasıMenuSayisi.get(i).getText().contains(expectedCategoryName)) {
+                arananKategoriVarMi = true;
+            }
+        }
+
+        Assert.assertTrue(arananKategoriVarMi);
+
+        // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
+        merchLoginPage.profileDropdown.click();
+        merchLoginPage.logOutButton.click();
+
+        Driver.closeDriver();
     }
 }

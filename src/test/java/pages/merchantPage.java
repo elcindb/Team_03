@@ -1241,5 +1241,9 @@ public class merchantPage {
     //Attribute - Size Menu Delete item confirmation button
     @FindBy(xpath = "//*[@class='btn btn-green item_delete']")
     public WebElement attDeleteConfirm;
+
+    // Date filter 30 days button
+    @FindBy(xpath = "//*[text()='Last 30 Days']")
+    public WebElement dateFilter30Days;
     
 }
