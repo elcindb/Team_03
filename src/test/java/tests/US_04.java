@@ -332,7 +332,97 @@ public class US_04 extends TestBaseRapor {
         // Driver'ı kapat
         Driver.closeDriver();
     }
+    @Test
+    public void TC_0410() {
+        extentTest = extentReports.createTest("Social media icons test");
+        // KULLANICI FOOTER BOLUMUNDE SOSYAL MEDIA IKONLARI TESTI
+    /*
+        Kullanici browser acar.
+        Url'i girer.
+        Anasayfaya erisim saglandigini dogrular.
+        Footer bölümünün anasayfada görünürlüğünü doğrular
+        Facebook ikonunun tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        Instagram ikonunun tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        Linkedin ikonunun tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        Twitter ikonunun tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        YouTube ikonunun tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        Sayfayi kapatir.
+    */
+        /*footer bolumunde bloglarin testi */
+        Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
+        userPage userPage = new userPage();
+        Actions actions = new Actions(Driver.getDriver());
 
+        // Anasayfaya erisim saglandigini dogrular.
+        Assert.assertTrue(userPage.headerLogo.isDisplayed());
+        ReusableMethods.wait(2);
+
+        // Sayfanın contact us'a kadar kaydırılması
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", userPage.SubFooterLogo);
+
+        // SubFooter bölümünün anasayfada görünürlüğünü doğrula
+        Assert.assertTrue(userPage.SubFooterLogo.isDisplayed());
+
+        // Kısa bir bekleme süresi ekle
+        ReusableMethods.wait(2);
+
+        // SOSYAL MEDIA IKONLARI linklerinin tıklanabilir ve ilgili sayfaya gidebildiğini doğrular
+        Assert.assertTrue(userPage.FacebookOnFooter.isEnabled());
+        ReusableMethods.wait(1);
+
+        // Facebook ikonuna tıkla ve yeni sekmeye geç
+        actions.click(userPage.FacebookOnFooter).perform();
+        ReusableMethods.wait(2);
+
+        // Ana pencerenin tutamaçını al
+        String mainWindowHandle = Driver.getDriver().getWindowHandle();
+
+        // Facebook sekmesine geç
+        String facebookWindowHandle = ReusableMethods.switchToWindowByUrl("facebook.com");
+
+        // Facebook URL'inin doğru olduğunu doğrula
+        String actualURL = Driver.getDriver().getCurrentUrl();
+        String expectedURL = "https://www.facebook.com/";
+        ReusableMethods.wait(1);
+        Assert.assertEquals(actualURL, expectedURL);
+
+        // Facebook sekmesini kapat ve ana sekmeye geri dön
+        Driver.getDriver().close();
+        ReusableMethods.switchToMainWindow(mainWindowHandle);
+
+        // Driver'ı kapat
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void TC_0411() {
+        extentTest = extentReports.createTest("© Flavor Fetch Corp. 2023 text test");
+    /*
+         Footer bolumunde © Flavor Fetch Corp. 2023 gorunur oldugunu Testi
+    */
+        //Kullanici browser acar.
+        //Url'i girer.
+        Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
+        userPage userPage = new userPage();
+        Actions actions = new Actions(Driver.getDriver());
+
+        // Anasayfaya erisim saglandigini dogrular.
+        Assert.assertTrue(userPage.headerLogo.isDisplayed());
+        ReusableMethods.wait(2);
+
+        // Sayfanın contact us'a kadar kaydırılması
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", userPage.SubFooterLogo);
+
+        //Footer bölümünün anasayfada görünürlüğünü doğrular
+        Assert.assertTrue(userPage.Footer.isDisplayed());
+
+        //© Flavor Fetch Corp. 2023 yazısının görünür olduğunu doğrular
+        Assert.assertTrue(userPage.FooterFetchCorp2023.isDisplayed());
+        //Sayfayi kapatir.
+        Driver.closeDriver();
+    }
 
 }
 
