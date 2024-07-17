@@ -6,11 +6,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US_39 {
-
     adminPage adminPage = new adminPage();
+
 
     @Test
     public void TC_01(){
+
 
         //User opens browser and accesses to the page with the url
         Driver.getDriver().get(ConfigReader.getProperty("admin_Url"));
