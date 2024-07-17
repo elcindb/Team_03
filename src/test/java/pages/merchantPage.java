@@ -594,7 +594,7 @@ public class merchantPage {
     public List<WebElement> attIngredientsDeleteButtons;
 
     //Attributes altindaki Cooking Reference linki
-    @FindBy(xpath = "//*[class='position-relative attrmerchant_cookingref_list']")
+    @FindBy(xpath = "//*[@href='/backoffice/attrmerchant/cookingref_list']")
     public WebElement attCookingReferenceMenu;
 
     //Attributes-Cooking Reference sayfasindaki Add New Butonu
