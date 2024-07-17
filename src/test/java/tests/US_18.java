@@ -37,7 +37,7 @@ public class US_18 {
         userPage.userSavedStore.click();
 
         //Sayfada restaurant bilgisi olmadığını doğrular
-        Assert.assertEquals(userPage.savedShopList.size(), 0);
+        Assert.assertTrue(userPage.noShopOnSavedStoreLabel.isDisplayed());
 
         Driver.closeDriver();
     }
@@ -66,6 +66,7 @@ public class US_18 {
 
         // Açılan sayfada "Save store" yazısının üzerindeki kalp işaretine tıklar
         userPage.saveShoptoSavedStores.click();
+        ReusableMethods.wait(1);
 
         // Sayfanın sağ üst köşesindeki profil menüsünden "Saved Stores" sayfasına gider
         userPage.userDropDownMenu.click();
@@ -73,17 +74,19 @@ public class US_18 {
 
         // Sayfada beğendiği restorantın listelendiğini kontrol eder
 
-        String expectedShopName = "The Oceanaire Seafood Room";
 
         boolean isShopHere = false;
 
-        for (int i = 0; i < userPage.savedShopList.size(); i++) {
+        for (int i = 0; i < userPage.savedShopNameList.size(); i++) {
+            String expectedShopName = "The Oceanaire Seafood Room";
 
-            if (userPage.savedShopList.get(i).getText().contains(expectedShopName)) {
+            if (userPage.savedShopNameList.get(i).getText().contains(expectedShopName)) {
                 isShopHere = true;
                 break;
             }
         }
+
+        String expectedShopName = "The Oceanaire Seafood Room";
 
         Assert.assertTrue(isShopHere);
 
@@ -133,9 +136,9 @@ public class US_18 {
 
         boolean isShopHere = false;
 
-        for (int i = 0; i < userPage.savedShopList.size(); i++) {
+        for (int i = 0; i < userPage.savedShopNameList.size(); i++) {
 
-            if (userPage.savedShopList.get(i).getText().contains(expectedShopName)) {
+            if (userPage.savedShopNameList.get(i).getText().contains(expectedShopName)) {
                 isShopHere = true;
                 break;
             }

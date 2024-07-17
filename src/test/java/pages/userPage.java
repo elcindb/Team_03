@@ -9,10 +9,11 @@ import java.util.List;
 
 public class userPage {
 
-    public userPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public userPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
     // user sayfasındakı flavor fetch logosunun xpath
     @FindBy(xpath = "//*[@class='top-logo']")
     public WebElement userlogo;
@@ -74,7 +75,6 @@ public class userPage {
     // user header kısmında Cart
     @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
     public WebElement userCart;
-
 
 
     @FindBy(xpath = "//*[@class='btn-white-parent non-trasparent']")
@@ -250,58 +250,58 @@ public class userPage {
     @FindBy(xpath = "//div[@class='col cuisineMainPage'][8]")
     public WebElement chineseButton;
 
-    @FindBy( xpath= "(//*[@class=\"owl-carousel-nav prev mr-4\"])[1]")
+    @FindBy(xpath = "(//*[@class=\"owl-carousel-nav prev mr-4\"])[1]")
     public WebElement oncekiButton;
 
-    @FindBy (xpath = "(//*[@class=\"owl-carousel-nav next\"])[1]")
+    @FindBy(xpath = "(//*[@class=\"owl-carousel-nav next\"])[1]")
     public WebElement sonrakiButton;
 
-    @FindBy (xpath = "(//*[@href=\"https://qa.flavorfetch.com/team-3\"])[3]")
+    @FindBy(xpath = "(//*[@href=\"https://qa.flavorfetch.com/team-3\"])[3]")
     public WebElement team3Box;
 
-    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
     public WebElement iskenderAddCart;
 
-    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
     public WebElement pizzaAddCart;
 
-    @FindBy (xpath = "(//div[@class='position-relative quantity-wrapper'])[2]")
+    @FindBy(xpath = "(//div[@class='position-relative quantity-wrapper'])[2]")
     public WebElement hamburgerAddCart;
 
-    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[3]")
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[3]")
     public WebElement mozarellaSticksAddCart;
 
-    @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[3]")
+    @FindBy(xpath = "(//a[@class='rounded-pill qty-btn'])[3]")
     public WebElement eksiButton;
 
-    @FindBy (xpath = "(//a[@class='rounded-pill qty-btn'])[4]")
+    @FindBy(xpath = "(//a[@class='rounded-pill qty-btn'])[4]")
     public WebElement artiButton;
 
-    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
     public WebElement addToCartIskenderButton;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-green w-100 pointer d-flex justify-content-between']")
+    @FindBy(xpath = "//*div[@class = 'btn btn-green w-100 pointer d-flex justify-content-between']")
     public WebElement checkOutButton;
 
-    @FindBy (xpath = "//*div[@class = 'mr-1']")
+    @FindBy(xpath = "//*div[@class = 'mr-1']")
     public WebElement cashpaymentButton;
 
-    @FindBy (xpath = "//*div[@class = 'btn btn-green w-100']" )
+    @FindBy(xpath = "//*div[@class = 'btn btn-green w-100']")
     public WebElement addCashButton;
 
-    @FindBy (xpath = "(//li[@class='position-relative'])[1]")
+    @FindBy(xpath = "(//li[@class='position-relative'])[1]")
     public WebElement contactUsButton;
 
-    @FindBy (xpath = "//*[@href='https://qa.flavorfetch.com/terms-and-conditions']")
+    @FindBy(xpath = "//*[@href='https://qa.flavorfetch.com/terms-and-conditions']")
     public WebElement termsAndConditionsButton;
 
-    @FindBy (xpath = "(//div[@class='text-left'])[2]")
+    @FindBy(xpath = "(//div[@class='text-left'])[2]")
     public WebElement termsAndConditionsContentText;
 
-    @FindBy (xpath = "(//li[@class='position-relative '])[3]")
+    @FindBy(xpath = "(//li[@class='position-relative '])[3]")
     public WebElement privacyPolicyButton;
 
-    @FindBy (xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[2]")
     public WebElement addToCartoMozarellaButton;
 
     @FindBy(xpath = "//*[@href=\"https://qa.flavorfetch.com/merchant/signup\"]")
@@ -311,7 +311,7 @@ public class userPage {
     @FindBy(xpath = "(//div[@class='position-relative']/a[1])[1]")
     public WebElement havanaSandwichPage;
 
-    @FindBy (xpath = "(//div[@class='position-relative']/a[1])[2]")
+    @FindBy(xpath = "(//div[@class='position-relative']/a[1])[2]")
     public WebElement dolanUyghurPage;
 
     @FindBy(xpath = "(//div[@class='position-relative']/a[1])[3]")
@@ -374,7 +374,7 @@ public class userPage {
 
     //Dükkanı Saved Stores sayfasından çıkarmak için kalp butonu
     @FindBy(xpath = "(//i[@class='zmdi zmdi-favorite text-green'])[1]")
-    public  WebElement removeShoptoSavedStore;
+    public WebElement removeShoptoSavedStore;
 
     //
     @FindBy(xpath = "(//*[@href=\"https://qa.flavorfetch.com/oceanaire-seafood\"])[1]")
@@ -384,9 +384,12 @@ public class userPage {
     @FindBy(xpath = "(//*[@class='w-50 align-self-center'])[1]")
     public WebElement shopName;
 
+    // Saved Store'da dükkan yok texti
+    @FindBy(xpath = "//*[@class='col-md-6']")
+    public WebElement noShopOnSavedStoreLabel;
 
-
-
-
+    // Kaydedilen restorant isim listesi
+    @FindBy(xpath = "//*[@class='m-0 text-truncate']")
+    public List<WebElement> savedShopNameList;
 
 }
