@@ -431,6 +431,10 @@ public class userPage {
     @FindBy(xpath = "(//*[@class='p-2'])[2]")
     public WebElement GooglePlayLogoOnFooter;
 
+    //Footerda © Flavor Fetch Corp. 2023
+    @FindBy(xpath = "//p[text()='  © Flavor Fetch Corp. 2023']")
+    public WebElement FooterFetchCorp2023;
+
     //AppleStore sitesinde Apple Logo
     @FindBy(xpath = "//*[@class='ac-ln-title']")
     public WebElement LogoOnAppleStoreWebsite;
