@@ -76,7 +76,7 @@ public class userPage {
     public WebElement userSıparısAdetı;
 
     // user header kısmında Cart
-    @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
+    @FindBy(xpath = "//*[@class='ssm-toggle-navx']")
     public WebElement userCart;
 
 
