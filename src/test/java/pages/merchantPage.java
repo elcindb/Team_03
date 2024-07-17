@@ -518,7 +518,7 @@ public class merchantPage {
     public WebElement merchantLoginButton;
 
     //Attributes Menu
-    @FindBy(xpath = "//li[@class='attributes active']")
+    @FindBy(xpath = "//*[@class="attributes"]")
     public WebElement attributesMenu;
 
     //Attributes altindaki Size linki
