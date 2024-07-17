@@ -51,7 +51,6 @@ public class US_21 {
     @Test
     public void TC_21_002() {
 
-        merchLoginPage merchLoginPage = new merchLoginPage();
         merchantPage merchantPage = new merchantPage();
 
         // Restaurant yöneticisi browser açar
