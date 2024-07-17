@@ -225,4 +225,16 @@ public class adminPage {
 
     @FindBy(xpath = "//*[@class='btn btn-green btn-full mt-3']")
     public WebElement SaveButton;
+
+    @FindBy(xpath = "//*[@class='merchant']")
+    public WebElement merchantMenu;
+
+    @FindBy(xpath = "//*[@class='position-relative vendor_list']")
+    public WebElement merchantListMenu;
+
+    @FindBy(xpath = "//*[@class='btn btn-black btn-circle']")
+    public WebElement addNewMerchantButton;
+
+    @FindBy(xpath = "//*[@class='form-control rounded search w-25']")
+    public WebElement merchantSearchBox;
 }
