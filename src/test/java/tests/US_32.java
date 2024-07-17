@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 
 public class US_32 {
 
-    merchantPage merchantPage = new merchantPage();
+
     //@Test
     //public void TC_01(){   Diger test caselerin icerisinde zaten yapiliyor, o yuzden yapmiyorum
 
@@ -28,6 +28,8 @@ public class US_32 {
 
     @Test
     public void TC_02(){
+
+        merchantPage merchantPage = new merchantPage();
 
         //User opens browser and confirms access to the merchant login page with the url
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -72,6 +74,9 @@ public class US_32 {
 
     @Test
     public void TC_03() {
+
+        merchantPage merchantPage = new merchantPage();
+
         //User opens browser and confirms access to the merchant login page with the url
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
         //User logs in with username and password
@@ -113,6 +118,9 @@ public class US_32 {
 
     @Test
     public void TC_04() {
+
+        merchantPage merchantPage = new merchantPage();
+
         //User opens browser and confirms access to the merchant login page with the url
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
         //User logs in with username and password
