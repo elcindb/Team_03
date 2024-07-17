@@ -7,18 +7,18 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.merchantPage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.JSUtilities;
-import utilities.ReusableMethods;
+import utilities.*;
 
 import java.util.List;
 
 
-public class US_24 {
+public class US_24 extends TestBaseRapor {
 
     @Test
     public void TC_24_001() {
+
+        extentTest = extentReports.createTest("Mevcut kategorileri görüntüleme testi");
+
         merchantPage merchantPage = new merchantPage();
 
         //Restaurant yöneticisi browser açar
@@ -54,6 +54,9 @@ public class US_24 {
 
     @Test
     public void TC_24_002() {
+
+        extentTest = extentReports.createTest("Yeni bir kategori ekleme ve eklendiğini kontrol  testi");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -123,6 +126,9 @@ public class US_24 {
     @Test
     public void TC24_003() {
 
+        extentTest = extentReports.createTest("Mevcut kategori güncelleme ve güncellendiğini kontrol testi ");
+
+
         Actions actions = new Actions(Driver.getDriver());
 
         // Restaurant yöneticisi browser açar
@@ -176,6 +182,8 @@ public class US_24 {
     @Test
     public void TC24_004() {
 
+        extentTest = extentReports.createTest("Mevcut kategori silme ve sildiğini kontrol testi ");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -220,6 +228,9 @@ public class US_24 {
 
     @Test
     public void TC24_005() {
+
+        extentTest = extentReports.createTest("Mevcut kategori arama testi");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();

@@ -3,16 +3,16 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.userPage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.JSUtilities;
-import utilities.ReusableMethods;
+import utilities.*;
 
-public class US_18 {
+public class US_18 extends TestBaseRapor {
     @Test
     public void TC18_001() {
         //Kullanıcı browser açar
         //URL'e gider
+
+        extentTest = extentReports.createTest("Boş Saved Stores sayfası görünürlük ve sayfa yapısı kontrol testi");
+
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
         //Ana sayfada sağ üst köşedeki sign in butonuna tıklar
         userPage userPage = new userPage();
@@ -44,6 +44,9 @@ public class US_18 {
 
     @Test
     public void TC18_002() {
+
+        extentTest = extentReports.createTest("Restoranları Saved Stores sayfasına ekleme  ve sayfa yapısı kontrol testi");
+
         //Kullanıcı browser açar
         //URL'e gider
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
@@ -103,6 +106,9 @@ public class US_18 {
 
     @Test
     public void TC18_003() {
+
+        extentTest = extentReports.createTest("Restoranları Saved Stores sayfasından kaldırma testi");
+
         //Kullanıcı browser açar
         //URL'e gider
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));

@@ -6,11 +6,15 @@ import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_31 {
+public class US_31 extends TestBaseRapor {
 
     @Test
     public void TC31_001() {
+
+        extentTest = extentReports.createTest("Bütün siparişleri ve detaylarını görüntüleme testi ");
+
 
         // Restaurant yöneticisi browser açar
         // URL'e gider
@@ -48,6 +52,9 @@ public class US_31 {
 
     @Test
     public void TC31_002() {
+
+        extentTest = extentReports.createTest("Her bir siparişin detay bilgilerine erişim testi ");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -81,8 +88,12 @@ public class US_31 {
         Driver.closeDriver();
 
     }
+
     @Test
     public void TC31_003() {
+
+        extentTest = extentReports.createTest("Sipariş bilgilerini indirme testi");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -117,6 +128,8 @@ public class US_31 {
     @Test
     public void TC31_004() {
 
+        extentTest = extentReports.createTest("Siparişleri filtreleme testi ");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -137,7 +150,9 @@ public class US_31 {
 
         //  Sayfadaki tarih kısmına belirtilen tarih aralığını seçer
         merchantPage.dateFilterTextBox.click();
+        ReusableMethods.wait(5);
         merchantPage.dateFilter30Days.click();
+        ReusableMethods.wait(5);
         //  Listede o tarihler arasında verilmiş sipariş olduğunu kontrol eder
 
         Assert.assertFalse(merchantPage.orderIdColoumn.isEmpty());
@@ -151,6 +166,9 @@ public class US_31 {
 
     @Test
     public void TC31_005() {
+
+        extentTest = extentReports.createTest("Özet satış ve finansal bilgileri görüntüleme testi ");
+
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();

@@ -1,21 +1,22 @@
 package tests;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class US_21 {
+public class US_21 extends TestBaseRapor {
 
     @Test
     public void TC_21_001() {
+
+        extentTest = extentReports.createTest("Dashboard menü yapısı kontrol testi");
 
         merchantPage merchantPage = new merchantPage();
 
@@ -52,6 +53,8 @@ public class US_21 {
 
     @Test
     public void TC_21_002() {
+
+        extentTest = extentReports.createTest("Alt menüler görüntüleme ve fonksiyon testi");
 
         merchantPage merchantPage = new merchantPage();
 
