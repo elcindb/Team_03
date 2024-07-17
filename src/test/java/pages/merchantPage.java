@@ -522,7 +522,7 @@ public class merchantPage {
     public WebElement attributesMenu;
 
     //Attributes altindaki Size linki
-    @FindBy(xpath = "//li[@class='position-relative attrmerchant_size_list']")
+    @FindBy(xpath = "//*[@href='/backoffice/attrmerchant/size_list']")
     public WebElement attSizeMenu;
 
     //Attributes-Size sayfasindaki Add New Butonu
