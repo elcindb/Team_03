@@ -10,10 +10,13 @@ import utilities.ReusableMethods;
 
 public class US_27 {
 
-    merchantPage merchantPage = new merchantPage();
+
 
     @Test
     public void TC_01(){
+
+        merchantPage merchantPage = new merchantPage();
+        
         //User opens browser and confirms access to the merchant login page with the url
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
         //User logs in with username and password
