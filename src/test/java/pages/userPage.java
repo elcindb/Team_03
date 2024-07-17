@@ -22,6 +22,9 @@ public class userPage {
     @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
     public WebElement userSignInBotten;
 
+
+
+
     // User sayfasındaki Mobile number or email
     @FindBy(xpath = "(//*[@class='form-control form-control-text'])[1]")
     public WebElement userNameTextBox;
@@ -289,7 +292,7 @@ public class userPage {
     @FindBy(xpath = "//*div[@class = 'btn btn-green w-100']")
     public WebElement addCashButton;
 
-    @FindBy(xpath = "(//li[@class='position-relative'])[1]")
+    @FindBy(xpath = "//*[@href='https://qa.flavorfetch.com/contactus']")
     public WebElement contactUsButton;
 
     @FindBy(xpath = "//*[@href='https://qa.flavorfetch.com/terms-and-conditions']")
@@ -391,6 +394,7 @@ public class userPage {
     // Kaydedilen restorant isim listesi
     @FindBy(xpath = "//*[@class='m-0 text-truncate']")
     public List<WebElement> savedShopNameList;
+
 
     // ***** Ulvi Start **** //
 
@@ -575,6 +579,51 @@ public class userPage {
     //User Add to Cart En Sonda olan
     @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
     public WebElement LastAddToCard;
+
+
+
+    //------------------------//
+    //Register Sayfası Locateleri Mahmut
+
+    //login sayfasındaki Sıgn Up Butonu
+    @FindBy(xpath = "//*[@href='/account/signup?redirect=']")
+    public WebElement userSıgnupButton;
+
+    //REGİSTER SAYFASI
+
+    @FindBy(xpath = "//*[@for='firstname']")
+    public WebElement registerfirstNameTextBox;
+
+    @FindBy(xpath = "//*[@for='lastname']")
+    public WebElement registerLastNameTextBox;
+
+    @FindBy(xpath = "//*[@for='email_address']")
+    public WebElement registerEmailAdressTextBox;
+
+    @FindBy(xpath = "(//*[@type='text'])[3]")
+    public WebElement registerPhoneNumbertextBox;
+
+    @FindBy(xpath = "//*[@for='password']")
+    public WebElement registerPasswordTextbox;
+
+    @FindBy(xpath = "//*[@for='cpassword']")
+    public WebElement registerConfirmPAsswordTextBox;
+
+    @FindBy (xpath = "//*[@class='btn btn-green w-100']")
+    public WebElement registerSıgnUpButton;
+
+    @FindBy(xpath = "//*[@id='vue-register']")
+    public WebElement registerSuccesYazisi;
+
+    //---------
+    //contact us sayfası locateleri
+
+    //Your request has been sent. alert yazısı
+    @FindBy(xpath = "//*[@class='alert alert-success']")
+    public WebElement RequestHasBeenSentAlert;
+
+    @FindBy(xpath = "//*[@for='AR_contact_fullname']")
+    public WebElement fullNameTextBox;
 
 
 
