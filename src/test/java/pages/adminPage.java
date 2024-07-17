@@ -16,11 +16,11 @@ public class adminPage {
     @FindBy(className = "navbar-brand")
     public WebElement allMerchantText;
 
-    @FindBy(className = "btn btn-black btn-circle")
-    public WebElement addNewMerchantButton;
+  //  @FindBy(className = "btn btn-black btn-circle")
+    //public WebElement addNewMerchantButton;
 
-    @FindBy(className = "form-control rounded search w-25")
-    public WebElement merchantSearchBox;
+    //@FindBy(className = "form-control rounded search w-25")
+    //public WebElement merchantSearchBox;
 
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement merchantSearchButton;
@@ -148,7 +148,7 @@ public class adminPage {
     @FindBy(xpath = "//*[@for='LoginForm_username']")
     public WebElement UserNameTextBox;
 
-    @FindBy (xpath = "//*[@for='LoginForm_password']")
+    @FindBy (xpath = "//*[text()='Username ']")
     public WebElement PasswordTextBox;
 
     @FindBy(xpath = "//*[@for='LoginForm_rememberMe']")
