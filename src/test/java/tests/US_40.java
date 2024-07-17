@@ -11,11 +11,15 @@ import pages.adminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_40 {
+
+
+public class US_40 extends TestBaseRapor {
 
     @Test
-    public void KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti(){
+    public void KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti (){
+      extentTest = extentReports.createTest("KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti");
       adminPage adminPage=new adminPage();
         //Admin URL' yi girer . Kullanıcı adını ve parolasını girer dashboarda erişim sağlar.
         Driver.getDriver().get("https://qa.flavorfetch.com/backoffice/login");
