@@ -1245,5 +1245,11 @@ public class merchantPage {
     // Date filter 30 days button
     @FindBy(xpath = "//*[text()='Last 30 Days']")
     public WebElement dateFilter30Days;
+
+    @FindBy(xpath = "(//*[text()=' Profile '])[1]")
+    public WebElement merchantAdminProfile;
+
+    @FindBy(xpath = "//*[@class='position-relative orders_ready']")
+    public WebElement ordersReadySideBarMenu;
     
 }
