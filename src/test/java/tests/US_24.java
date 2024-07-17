@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.merchLoginPage;
 import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -20,7 +19,6 @@ public class US_24 {
 
     @Test
     public void TC_24_001() {
-        merchLoginPage merchLoginPage = new merchLoginPage();
         merchantPage merchantPage = new merchantPage();
 
         //Restaurant yöneticisi browser açar
@@ -48,8 +46,8 @@ public class US_24 {
         Assert.assertTrue(isCategoryActionDisplayed);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchLoginPage.profileDropdown.click();
-        merchLoginPage.logOutButton.click();
+        merchantPage.profileDropdown.click();
+        merchantPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -59,7 +57,6 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
-        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -117,8 +114,8 @@ public class US_24 {
         Assert.assertTrue(isNewCategoryHere);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchLoginPage.profileDropdown.click();
-        merchLoginPage.logOutButton.click();
+        merchantPage.profileDropdown.click();
+        merchantPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -131,7 +128,6 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
-        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -171,8 +167,8 @@ public class US_24 {
         Assert.assertTrue(merchantPage.categoryNameColoumn.get(0).getText().contains(expectedUpdatedCategoryName));
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchLoginPage.profileDropdown.click();
-        merchLoginPage.logOutButton.click();
+        merchantPage.profileDropdown.click();
+        merchantPage.logOutButton.click();
 
         Driver.closeDriver();
     }
@@ -183,7 +179,6 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
-        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -218,8 +213,8 @@ public class US_24 {
         Assert.assertTrue(merchantPage.categoryNameColoumn.size() + 1 == mevcutKategoriSayisi);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchLoginPage.profileDropdown.click();
-        merchLoginPage.logOutButton.click();
+        merchantPage.profileDropdown.click();
+        merchantPage.logOutButton.click();
         Driver.closeDriver();
     }
 
@@ -228,7 +223,6 @@ public class US_24 {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
-        merchLoginPage merchLoginPage = new merchLoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
 
         //Sisteme giriş yapmak için doğru e-mail ve şifre girip sign in butonuna basar
@@ -264,8 +258,8 @@ public class US_24 {
         Assert.assertTrue(arananKategoriVarMi);
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
-        merchLoginPage.profileDropdown.click();
-        merchLoginPage.logOutButton.click();
+        merchantPage.profileDropdown.click();
+        merchantPage.logOutButton.click();
 
         Driver.closeDriver();
     }
