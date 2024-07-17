@@ -386,4 +386,21 @@ public class ReusableMethods {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
+
+        // Belirli bir URL'ye göre pencere geçişi yapar ve geçiş yapılan pencerenin tutamacını döner
+    public static String switchToWindowByUrl(String partialUrl) {
+        Set<String> allWindows = Driver.getDriver().getWindowHandles();
+        for (String windowHandle : allWindows) {
+            Driver.getDriver().switchTo().window(windowHandle);
+            if (Driver.getDriver().getCurrentUrl().contains(partialUrl)) {
+                return windowHandle;
+            }
+        }
+        throw new RuntimeException("Belirtilen URL ile pencere bulunamadı: " + partialUrl);
+    }
+
+    // Ana pencereye dönmek için yöntem
+    public static void switchToMainWindow(String mainWindowHandle) {
+        Driver.getDriver().switchTo().window(mainWindowHandle);
+    }
 }
