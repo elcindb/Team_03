@@ -1237,5 +1237,9 @@ public class merchantPage {
     //Food Items Search Box
     @FindBy(xpath = "(//*[@class='col-sm-12 col-md-6'])[2]")
     public WebElement foodItemsSearchBox;
+
+    //Attribute - Size Menu Delete item confirmation button
+    @FindBy(xpath = "//*[@class='btn btn-green item_delete']"
+    public WebElement attDeleteConfirm;
     
 }
