@@ -558,7 +558,7 @@ public class merchantPage {
     public List<WebElement> attSizeDeleteButtons;
 
     //Attributes altindaki Ingredients linki
-    @FindBy(xpath = "//*[@class='position-relative attrmerchant_ingredients_list active']")
+    @FindBy(xpath = "//*[@class='position-relative attrmerchant_ingredients_list']")
     public WebElement attIngredientsMenu;
 
     //Attributes-Ingredients sayfasindaki Add New Butonu
