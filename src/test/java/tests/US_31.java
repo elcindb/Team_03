@@ -47,7 +47,7 @@ public class US_31 {
     }
 
     @Test
-    public void TC31_002(){
+    public void TC31_002() {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -65,14 +65,14 @@ public class US_31 {
         // "Orders" menüsüne tıkladıktan sonra açılan "All Orders" alt menüsüne tıklar
         merchantPage.allOrdersMenu.click();
 
-       // Listedeki siparişin satır sonundaki "Göz" (View) ikonuna tıklar
+        // Listedeki siparişin satır sonundaki "Göz" (View) ikonuna tıklar
 
         merchantPage.viewDetailsButton.get(0).click();
 
-       // Açılan sekmedeki bilgilerin o siparişin detay bilgileri olduğunu kontrol eder
+        // Açılan sekmedeki bilgilerin o siparişin detay bilgileri olduğunu kontrol eder
 
-       ReusableMethods.switchToWindow("Order Details");
-       Assert.assertTrue(merchantPage.detailedOrderInfoBox.isDisplayed());
+        ReusableMethods.switchToWindow("Order Details");
+        Assert.assertTrue(merchantPage.detailedOrderInfoBox.isDisplayed());
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
         merchantPage.profileDropdown.click();
@@ -82,7 +82,7 @@ public class US_31 {
 
     }
     @Test
-    public void TC31_003(){
+    public void TC31_003() {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -101,10 +101,10 @@ public class US_31 {
         // "Orders" menüsüne tıkladıktan sonra açılan "All Orders" alt menüsüne tıklar
         merchantPage.allOrdersMenu.click();
 
-       // Listedeki siparişin satır sonundaki  "İndir" (Download) ikonuna tıklar
+        // Listedeki siparişin satır sonundaki  "İndir" (Download) ikonuna tıklar
         merchantPage.downloadReceiptButton.get(0).click();
 
-       // Sipariş fişinin PDF olarak indirildiğini kontrol eder
+        // Sipariş fişinin PDF olarak indirildiğini kontrol eder
         Assert.assertTrue(merchantPage.downloadReceiptButton.get(0).isEnabled());
 
         // Sonraki Testin DÜzgün Çalışabilmesi İçin Çıkış Yapılmalı
@@ -115,7 +115,7 @@ public class US_31 {
     }
 
     @Test
-    public void TC31_004(){
+    public void TC31_004() {
 
         // Restaurant yöneticisi browser açar
         // URL'e gider
@@ -135,10 +135,10 @@ public class US_31 {
         // "Orders" menüsüne tıkladıktan sonra açılan "All Orders" alt menüsüne tıklar
         merchantPage.allOrdersMenu.click();
 
-      //  Sayfadaki tarih kısmına belirtilen tarih aralığını seçer
+        //  Sayfadaki tarih kısmına belirtilen tarih aralığını seçer
         merchantPage.dateFilterTextBox.click();
         merchantPage.dateFilter30Days.click();
-      //  Listede o tarihler arasında verilmiş sipariş olduğunu kontrol eder
+        //  Listede o tarihler arasında verilmiş sipariş olduğunu kontrol eder
 
         Assert.assertFalse(merchantPage.orderIdColoumn.isEmpty());
 
@@ -150,7 +150,7 @@ public class US_31 {
     }
 
     @Test
-    public void TC31_005(){
+    public void TC31_005() {
         // Restaurant yöneticisi browser açar
         // URL'e gider
         merchantPage merchantPage = new merchantPage();
@@ -169,7 +169,7 @@ public class US_31 {
         // "Orders" menüsüne tıkladıktan sonra açılan "All Orders" alt menüsüne tıklar
         merchantPage.allOrdersMenu.click();
 
-       // Sayfanın üst panelinde toplam sipariş sayısı ve toplam kazanç gibi bilgileri olduğunu kontrol eder
+        // Sayfanın üst panelinde toplam sipariş sayısı ve toplam kazanç gibi bilgileri olduğunu kontrol eder
         Assert.assertTrue(merchantPage.ordersSummary.isDisplayed());
         Assert.assertTrue(merchantPage.cancelledOrdersSummary.isDisplayed());
         Assert.assertTrue(merchantPage.totalRefundSummary.isDisplayed());
