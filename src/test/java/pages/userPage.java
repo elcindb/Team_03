@@ -629,6 +629,77 @@ public class userPage {
     @FindBy(xpath = "//*[@for='AR_contact_fullname']")
     public WebElement fullNameTextBox;
 
+    @FindBy(xpath = "//*[@class='zmdi zmdi-eye']")
+    public WebElement visiblePassword;
+
+    @FindBy(xpath = "//*[@for='rememberme']")
+    public WebElement rememberMeCheckbox;
+
+
+    @FindBy(xpath = "//*[text()='Login']")
+    public WebElement loginYazisi;
+
+    @FindBy(xpath = "//*[@class='alert alert-warning']")
+    public WebElement unabletologinYazisi;
+
+
+    @FindBy(xpath = "//*[@class='a-12']")
+    public WebElement forgotPasswordLinki;
+
+    @FindBy(xpath = "//*[text()='Forgot Password']")
+    public WebElement forgotPasswordyazisi;
+
+    //Become a PArtner Bölümü Locateleri
+
+
+    @FindBy(xpath = "//*[@id='restaurant_name']")
+    public WebElement storeName;
+
+    @FindBy(xpath = "//*[@placeholder='Store address']")
+    public WebElement storeAddress;
+
+    @FindBy(xpath = "//*[@id='contact_email']")
+    public WebElement storeEmailAddress;
+
+    @FindBy(xpath = "//*[@data-mask='###################']")
+    public WebElement storeTelNumber;
+
+    @FindBy(xpath = "//*[@class='custom-control-label']")
+    public WebElement storeComissionRadioButton;
+
+    @FindBy(xpath = "//*[text()='Flavor Fetch General Terms and Conditions']")
+    public WebElement storeSozlesme;
+
+    @FindBy(xpath = "//*[text()='Privacy Policy']")
+    public WebElement storeGizlilikPolitikasi;
+
+    @FindBy(xpath = "//*[@class='btn btn-green w-100 mt-3']")
+    public WebElement storeSubmitButonu;
+
+    @FindBy(xpath = "//*[text()='Contact email \"a@gmail.com\" has already been taken.']")
+    public WebElement emailAlreadyTaken;
+
+    @FindBy(xpath = "//*[text()=' Login here ']")
+    public WebElement alreadyloginherelinki;
+
+
+    @FindBy(xpath = "//*[@class='form-control form-control-text']")
+    public WebElement anasayfaLokasyonAramaKutusu;
+
+    @FindBy(xpath = "//*[@for='cuisine4']")
+    public WebElement filterPizzaCheckbox;
+
+    @FindBy(xpath = "//*[text()='Checkout']")
+    public WebElement checkoutbutonu;
+
+    @FindBy(xpath = "(//*[@class='col-lg-8 col-md-8 col-10 d-flex align-items-center'])")
+    public WebElement stripeButonnu;
+
+    //*[text()='Confirming your order']
+    @FindBy(xpath = "//*[text()='Confirming your order']")
+    public WebElement ConfirmyourOrder;
+
+
 
 
 }
