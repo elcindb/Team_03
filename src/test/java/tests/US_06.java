@@ -9,12 +9,14 @@ import pages.userPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_06 { //sayfaya kayıt olabilme testi
+public class US_06 extends TestBaseRapor { //sayfaya kayıt olabilme testi
     pages.userPage userPage = new userPage();
 
     @Test
     public void test01(){
+        extentTest = extentReports.createTest("Sayfı Kayıt Olabilme Testi");
         //Kullanıcı anasayfaya gider, sağ üstte "sign in" linkini görür ve üzerine tıklar
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
         userPage.userSignInBotten.click();
@@ -61,7 +63,7 @@ public class US_06 { //sayfaya kayıt olabilme testi
         Assert.assertTrue(userPage.registerSuccesYazisi.isDisplayed());
 
         Driver.getDriver().quit();
-        
+
 
     }
 

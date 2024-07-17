@@ -9,14 +9,17 @@ import pages.userPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.security.Key;
 
-public class US_07 {
+public class US_07 extends TestBaseRapor {
     pages.userPage userPage = new userPage();
 
     @Test
     public void yetkililereUlasabilmeTesti(){
+
+        extentTest = extentReports.createTest("Yetkililere Ulaşabilme Testi");
 
         //Kullanıcı anasayfaya gider sayfanın en atında yer alan Contact Us linkine tıklar
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
