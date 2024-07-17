@@ -29,12 +29,12 @@ public class US_18 {
         userPage.userDropDownMenu.click();
 
         String expectedLabel = "Saved Stores";
-        String actualLabel = JSUtilities.getTextWithJS(Driver.getDriver(), userPage.savedStoreIcon).trim();
+        String actualLabel = JSUtilities.getTextWithJS(Driver.getDriver(), userPage.userSavedStore).trim();
 
         Assert.assertEquals(actualLabel, expectedLabel);
 
         //"Saved Store" 'a tıklayıp sayfaya gider.
-        userPage.savedStoreIcon.click();
+        userPage.userSavedStore.click();
 
         //Sayfada restaurant bilgisi olmadığını doğrular
         Assert.assertEquals(userPage.savedShopList.size(), 0);
@@ -69,7 +69,7 @@ public class US_18 {
 
         // Sayfanın sağ üst köşesindeki profil menüsünden "Saved Stores" sayfasına gider
         userPage.userDropDownMenu.click();
-        userPage.savedStoreIcon.click();
+        userPage.userSavedStore.click();
 
         // Sayfada beğendiği restorantın listelendiğini kontrol eder
 
@@ -125,7 +125,7 @@ public class US_18 {
 
         // Sayfanın sağ üst köşesindeki profil menüsünden "Saved Stores" sayfasına gider
         userPage.userDropDownMenu.click();
-        userPage.savedStoreIcon.click();
+        userPage.userSavedStore.click();
 
         // Sayfada beğendiği restorantın listelendiğini kontrol eder
 

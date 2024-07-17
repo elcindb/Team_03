@@ -1,5 +1,7 @@
 package tests;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.merchantPage;
@@ -51,7 +53,6 @@ public class US_21 {
     @Test
     public void TC_21_002() {
 
-        merchLoginPage merchLoginPage = new merchLoginPage();
         merchantPage merchantPage = new merchantPage();
 
         // Restaurant yöneticisi browser açar
@@ -92,7 +93,5 @@ public class US_21 {
         Assert.assertEquals(expectedUrl, actualUrl);
 
         Driver.closeDriver();
-
-
     }
 }
