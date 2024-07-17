@@ -22,11 +22,11 @@ public class userPage {
     public WebElement userSignInBotten;
 
     // User sayfasındaki Mobile number or email
-    @FindBy(xpath = "(//*[@class='required'])[1]")
+    @FindBy(xpath = "(//*[@class='form-control form-control-text'])[1]")
     public WebElement userNameTextBox;
 
     // User sayfasındaki Password
-    @FindBy(xpath = "(//*[@class='required'])[2]")
+    @FindBy(xpath = "(//*[@class='form-control form-control-text'])[2]")
     public WebElement userPasswordTextBox;
 
     // user sayfasında login olmak için Sign in butonu
