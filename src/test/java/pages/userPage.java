@@ -392,4 +392,190 @@ public class userPage {
     @FindBy(xpath = "//*[@class='m-0 text-truncate']")
     public List<WebElement> savedShopNameList;
 
+    // ***** Ulvi Start **** //
+
+
+    //Ana sayfada arama kutusu
+    @FindBy(xpath = "(//*[@class='form-control form-control-text'])[1]")
+    public WebElement SearchBoxOnHomePage;
+
+    //Ana sayfada arama kutusu uzerindeki yazi
+    @FindBy(xpath = "//h2[text()='We Deliver Deliciousness!']")
+    public WebElement WeDeliverDeliciousness;
+
+    //Ana sayfada arama kutusundaki arama ikonu
+    @FindBy(xpath = "(//*[@class='search_placeholder pos-right img-20'])[1]")
+    public WebElement iconOnSearchBox;
+
+    //Restoranlar sayfasinda solda yukarida gosterilen toplam Store sayisi
+    @FindBy(xpath = "(//*[@class='m-0'])[1]")
+    public WebElement TotalStore;
+
+    //Sub-footer logo
+    @FindBy (xpath = "//*[@class='sub-footer']")
+    public WebElement SubFooterLogo;
+
+    //Ana sayfa Footer bolumu
+    @FindBy(xpath = "(//*[@class='container'])[4]")
+    public WebElement Footer;
+
+    //Footerda AppStore Logo
+    @FindBy(xpath = "(//*[@class='p-2'])[1]")
+    public WebElement AppStoreLogoonFooter;
+
+    //Footerda GooglePlay Logo
+    @FindBy(xpath = "(//*[@class='p-2'])[2]")
+    public WebElement GooglePlayLogoOnFooter;
+
+    //AppleStore sitesinde Apple Logo
+    @FindBy(xpath = "//*[@class='ac-ln-title']")
+    public WebElement LogoOnAppleStoreWebsite;
+
+    //GooglePlay sitesinde PageHeader
+    @FindBy (xpath = "//*[@aria-label='Page Header']")
+    public WebElement HeaderOnGooglePlayWebsite;
+
+    @FindBy(xpath = "//*[text()='flavorfetch.com']")
+    public WebElement WebSiteUrlOnFooter;
+
+    // == Flavor Fetch Corp. START == //
+    @FindBy(xpath = "//*[text()='Contact us']")
+    public WebElement ContactUs;
+    @FindBy(xpath = "//*[text()='Terms and conditions']")
+    public WebElement TermsAndConditions;
+    @FindBy(xpath = "//*[text()='Privacy policy']")
+    public WebElement PrivacyPolicy;
+    // == Flavor Fetch Corp. END == //
+
+    // == Business START == //
+    @FindBy(xpath = "//*[text()='Become a Partner']")
+    public WebElement BecomePartner;
+    // == Business END == //
+
+
+    //== BLOG START == //
+    @FindBy(xpath = "//*[text()='The Social Side of Online Food Ordering...']")
+    public WebElement SocialSideBlog;
+    @FindBy(xpath = "//*[text()='Exploring the Delights of Home Cooking...']")
+    public WebElement ExploringBlog;
+    @FindBy(xpath = "//*[text()='Embrace the Convenience: Ordering Food Online'][1]")
+    public WebElement EmbranceBlog;
+    @FindBy(xpath = "//*[text()='Nourishing the Body and Mind...']")
+    public WebElement NourishingBlog;
+    @FindBy(xpath = "//h3[text()='The Social Side of Online Food Ordering: Connecting Communities Through Cuisine']")
+    public WebElement BlogDivH;
+    @FindBy(xpath = "//h3[text () = 'Embrace the Convenience: Ordering Food Online']")
+    public WebElement EmbranceBlogOnBlogText;
+
+    @FindBy(xpath = "//span[text()='Accept']")
+    public WebElement CookieAcceptButton;
+    //== BLOG END == //
+
+
+    // == Subfooter Social Media icons Start ==//
+    @FindBy(xpath = "//a[@class='facebook']")
+    public WebElement FacebookOnFooter;
+    @FindBy(xpath = "//a[@class='instagram']")
+    public WebElement InstagramOnFooter;
+    @FindBy(xpath = "//a[@class='linkedin']")
+    public WebElement LinkedinOnFooter;
+    @FindBy(xpath = "//a[@class='twitter']")
+    public WebElement TwitterOnFooter;
+    @FindBy(xpath = "//a[@class='youtube']")
+    public WebElement YouTubeOnFooter;
+    // == Subfooter Social Media icons End ==//
+
+
+    //== Github USER PAGE aldiklarim ==//
+    // user sayfasındakı Sign in butonunun xpath
+    @FindBy(xpath = "//*[@class='d-none d-lg-inline line-left']")
+    public WebElement userSignInButton;
+
+    // User sayfasındaki Mobile number or email
+    @FindBy(xpath = "//*[@for='username']")
+    public WebElement userNameInputBox;
+
+    // User sayfasındaki Password
+    @FindBy(xpath = "(//*[@class='required'])[2]")
+    public WebElement userPasswordInputBox;
+
+    // user sayfasında login olmak için Sign in butonu
+    @FindBy(xpath = "//*[@class='btn btn-green w-100']")
+    public WebElement userSignInToAccountButton;
+
+    //user profilde sidebarda adress bolumu
+    @FindBy(xpath = "//*[@class='addresses active']")
+    public WebElement userAddressButtonOnSidebarSection;
+
+    //user yeni adres ekledigi buton
+    @FindBy(xpath = "(//*[@class='btn btn-green'])[1]")
+    public  WebElement addNewAddress;
+
+    //user yeni adres ekledigi zaman acilan modal
+    @FindBy(xpath = "//*[@class='form-control form-control-text']")
+    public WebElement EnterDeliveryAdress;
+
+    //Arama sonucunda bulunan listelenen adresin xpath (Tampa aranacak)
+    @FindBy(xpath = "//*[@class='m-0 text-grey']")
+    public WebElement ListedDeliveryAdress;
+
+    //Adresi Save etme butonu
+    @FindBy(xpath = "//*[@class='btn btn-green w-100']")
+    public WebElement SaveDeliveryAddressBtn;
+
+    //Kullanicinin ekledigi en son adres
+    @FindBy(xpath = "(//*[@class='module truncate-overflow'])[1]")
+    public WebElement SavedAddress;
+
+    //Kullanici adres yenileme butonu
+    @FindBy(xpath = "(//*[@class='btn normal small'])[1]")
+    public WebElement userAddressEditBtn;
+
+    //Genel edit icinde adres basligi editleme butonu
+    @FindBy(xpath = "(//a[text()='Edit '])[1]")
+    public WebElement getUserAddressEditBtn2;
+
+    //Kullanici adresini yeniledigi Complete Add
+    @FindBy(xpath = "//*[@id='formatted_address']")
+    public WebElement CompleteAdd;
+
+    //Update olunmus adresin isminin gorunen kismi
+    @FindBy(xpath = "(//*[@class='module truncate-overflow'])[1]")
+    public WebElement UpdatedAddressValidation;
+
+    //Kullanici adres silme butonu
+    @FindBy(xpath = "(//a[text()='Delete'])[1]")
+    public WebElement addressDeleteButton;
+
+    //Kullanici adres silme zamani acilan modaldaki onay accept butonu
+    @FindBy(xpath = "//*[@class='btn btn-green small pl-4 pr-4 bootbox-accept']")
+    public WebElement DeleteAcceptionButton;
+
+    //Kullanici restoran sectikten sonra en populer filtresi
+    @FindBy(xpath = "//*[@for='sort_most_popular']")
+    public WebElement MostPopular;
+
+    //Kullanici restoran sectikten sonra show more
+    @FindBy(xpath = "//u[text()='Show more +']")
+    public WebElement ShowMoreButonu;
+
+    //Kullanici selectbox FastFood Secimi
+    @FindBy(xpath = "(//label[text()='Fast Food'])[2]")
+    public WebElement FasFood;
+
+
+    //Team3 restorani
+    @FindBy(xpath = "//h5[text()='Team3']")
+    public WebElement Team3Restaurant;
+
+    //User Add to Cart Modal-da Ilk Cikan
+    @FindBy(xpath = "(//span[@class='label'])[8]")
+    public WebElement AddToCardOnOpenedModal;
+
+    //User Add to Cart En Sonda olan
+    @FindBy(xpath = "(//a[@class='btn btn-grey xget-item-details'])[1]")
+    public WebElement LastAddToCard;
+
+
+
 }
