@@ -183,7 +183,7 @@ public class userPage {
     public WebElement userOrderID5;
 
     // orders kısmında siparişlerimin durumunu incelemek için kullanılan üç nokta buttonu
-    @FindBy(xpath = "((//*[@class='zmdi zmdi-more'])[1]")
+    @FindBy(xpath = "(//*[@class='zmdi zmdi-more'])[1]")
     public WebElement userOrdersUcNokta;
     @FindBy(xpath = "(//*[@class='dropdown-item ssm-toggle-nav'])[1]")
     public WebElement userOrdersView;
@@ -199,7 +199,7 @@ public class userPage {
     public WebElement userOrdersCancelButton;
     @FindBy(xpath = "(//*[@class='btn btn-black w-100'])[1]")
     public WebElement userOrdersDontCancel;
-    @FindBy(xpath = " (//*[@class='d-flex justify-content-between'])[2]")
+    @FindBy(xpath = "(//*[@class='d-flex justify-content-between'])[2]")
     public WebElement userGoToCheckout;
     @FindBy(xpath = "(//*[@class='d-block chevron-section promo-section d-flex align-items-center rounded mb-2'])[1]")
     public WebElement userPhoneNumber;
@@ -724,4 +724,25 @@ public class userPage {
 
 
 
+    //E2E Testi icin ek Locate ler
+
+    //Iskender Add to Cart
+    @FindBy(xpath = "(//*[text()=' Add to cart '])[1]")
+    public WebElement iskenderAddToCart;
+
+    //Add to cart penceresinde adet arttirma +
+    @FindBy(xpath = "(//*[@class='rounded-pill qty-btn'])[2]")
+    public WebElement adetArttir;
+
+    //Confirm your order sayfasindaki order ID elementi
+    @FindBy(xpath = "(//*[@class='m-0 mb-1 bold'])[1]")
+    public WebElement confirmedOrderID;
+
+    //View Order details penceresindeki Order ID
+    @FindBy(xpath = "(//*[@class='font13 m-0'])[1]")
+    public WebElement viewOrderDetailsOrderID;
+
+    //View Order Details penceresindeki X butonu
+    @FindBy(xpath = "//i[@class='zmdi zmdi-close']")
+    public WebElement viewOrderDetailsCloseButton;
 }
