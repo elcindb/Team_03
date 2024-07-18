@@ -7,14 +7,15 @@ import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_27 {
+public class US_27 extends TestBaseRapor {
 
 
 
     @Test
     public void TC_01(){
-
+        extentTest = extentReports.createTest("Merchant food - items access and sort test");
         merchantPage merchantPage = new merchantPage();
         
         //User opens browser and confirms access to the merchant login page with the url

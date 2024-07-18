@@ -4,14 +4,15 @@ import org.testng.annotations.Test;
 import pages.adminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_39 {
+public class US_39 extends TestBaseRapor {
     adminPage adminPage = new adminPage();
 
 
     @Test
     public void TC_01(){
-
+        extentTest = extentReports.createTest("Admin - merchant earnings page test");
 
         //User opens browser and accesses to the page with the url
         Driver.getDriver().get(ConfigReader.getProperty("admin_Url"));

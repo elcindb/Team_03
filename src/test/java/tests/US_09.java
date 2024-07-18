@@ -8,14 +8,16 @@ import pages.userPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_09 {
+public class US_09 extends TestBaseRapor {
+
 
     userPage userPage = new userPage();
 
     @Test
     public void TC_01(){
-
+        extentTest = extentReports.createTest("Privacy Policy access and content test");
         //User opens browser and accesses to the page with the url
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
 

@@ -7,8 +7,9 @@ import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_32 {
+public class US_32 extends TestBaseRapor {
 
 
     //@Test
@@ -28,7 +29,7 @@ public class US_32 {
 
     @Test
     public void TC_02(){
-
+        extentTest = extentReports.createTest("Merchant attributes - size page test");
         merchantPage merchantPage = new merchantPage();
 
         //User opens browser and confirms access to the merchant login page with the url
@@ -74,7 +75,7 @@ public class US_32 {
 
     @Test
     public void TC_03() {
-
+        extentTest = extentReports.createTest("Merchant attributes - Ingredients page test");
         merchantPage merchantPage = new merchantPage();
 
         //User opens browser and confirms access to the merchant login page with the url
@@ -118,7 +119,7 @@ public class US_32 {
 
     @Test
     public void TC_04() {
-
+        extentTest = extentReports.createTest("Merchant attributes - Cooking Reference page test");
         merchantPage merchantPage = new merchantPage();
 
         //User opens browser and confirms access to the merchant login page with the url
