@@ -6,10 +6,12 @@ import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_28 {
+public class US_28 extends TestBaseRapor {
     @Test
     public void TC_2801(){
+        extentTest = extentReports.createTest("Test of a restaurant manager examining the orders given,");
         merchantPage merchantPage = new merchantPage();
     // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -28,12 +30,12 @@ public class US_28 {
         Assert.assertTrue(merchantPage.newOrderInfoBox.isDisplayed());
         ReusableMethods.wait(2);
         //header >dropdown > logout tuşuna basılır,
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        Driver.closeDriver();
     }
 
     @Test
     public void TC_2802(){
+        extentTest = extentReports.createTest("Test of a restaurant manager's ability to direct an Assign Driver to the orders placed,");
         merchantPage merchantPage = new merchantPage();
 
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
@@ -49,12 +51,12 @@ public class US_28 {
         Assert.assertTrue(merchantPage.assignDriverButton.isEnabled());
         ReusableMethods.wait(2);
         //header >dropdown > logout tuşuna basılır,
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        Driver.closeDriver();
     }
 
     @Test
     public void TC_2803(){
+        extentTest = extentReports.createTest("testing a restaurant manager's ability to print orders,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -67,15 +69,16 @@ public class US_28 {
         ReusableMethods.wait(2);
         //DELİVERY FAİLED tıklanır,
         Assert.assertTrue(merchantPage.deliveryFailedButton.isEnabled());
+
         ReusableMethods.wait(2);
         //header >dropdown > logout tuşuna basılır,
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        Driver.closeDriver();
 
 
     }
     @Test
     public void TC_2804(){
+        extentTest = extentReports.createTest("The test of a restaurant manager delivering the order,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -90,8 +93,7 @@ public class US_28 {
         merchantPage.deliveredButton.click();
         ReusableMethods.wait(2);
         //header >dropdown > logout tuşuna basılır,
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        Driver.closeDriver();
 
     }
 }

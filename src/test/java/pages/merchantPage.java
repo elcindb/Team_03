@@ -411,7 +411,7 @@ public class merchantPage {
     public WebElement merchantPopularItemsButton;
 
     //Merchant-Popular İtems Last 30 days butonu
-    @FindBy(xpath = "(//*[text()='Last 30 days sales'])[2]")
+    @FindBy(xpath = "(//*[text()='Last 30 days sales'])[1]")
     public WebElement merchantPopularItemsLast30DaysButonu;
 
     //Merchant-Popular İtems ürün listesi ilk satır resmi ve linki (index kullan)
@@ -923,7 +923,7 @@ public class merchantPage {
     public WebElement deliveredButton;
 
     // Delivery Failed Button
-    @FindBy(xpath = "btn-black btn normal mr-2 font13 mb-3 mb-xl-0")
+    @FindBy(xpath = "//*[@class= 'btn-black btn normal mr-2 font13 mb-3 mb-xl-0']")
     public WebElement deliveryFailedButton;
 
     /*  ---------Orders-----------

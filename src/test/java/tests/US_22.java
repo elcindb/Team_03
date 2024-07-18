@@ -6,10 +6,13 @@ import pages.merchantPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_22 {
+public class US_22 extends TestBaseRapor {
     @Test
     public void TC_2201(){
+
+        extentTest = extentReports.createTest("First Name and Last Name change test");
 
         merchantPage merchantPage=new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
@@ -41,6 +44,8 @@ public class US_22 {
 
     @Test
     public void TC_2202(){
+
+        extentTest = extentReports.createTest("Profile photo changing test");
         merchantPage merchantPage=new merchantPage();
         //username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -64,6 +69,7 @@ public class US_22 {
 
     @Test
     public void TC_2203(){
+        extentTest = extentReports.createTest("Password change test,");
 
         merchantPage merchantPage=new merchantPage();
         //username ve password alanına datalar girilir. Sign in butonuna basılır.
@@ -81,6 +87,7 @@ public class US_22 {
         ReusableMethods.wait(2);
         //Old Password girilir
         merchantPage.merchantProfilePageOldPasswordTextbox.sendKeys("Flavor.2106");
+        ReusableMethods.wait(2);
         //New Password girilir
         merchantPage.merchantProfilePageNewPasswordTextBox.sendKeys("Flavor.2106");
         //Confirm New Password girilir,

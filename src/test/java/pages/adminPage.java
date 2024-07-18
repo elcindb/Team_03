@@ -237,4 +237,10 @@ public class adminPage {
 
     @FindBy(xpath = "//*[@class='form-control rounded search w-25']")
     public WebElement merchantSearchBox;
+
+    @FindBy(xpath = "(//*[@class='form-control form-control-text'])[1]")
+    public WebElement UserLoginName;
+
+    @FindBy (xpath = "(//*[@class='form-control form-control-text'])[2]")
+    public WebElement PasswordLogintBox;
 }
