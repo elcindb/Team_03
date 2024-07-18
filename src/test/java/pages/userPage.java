@@ -699,6 +699,28 @@ public class userPage {
     @FindBy(xpath = "//*[text()='Confirming your order']")
     public WebElement ConfirmyourOrder;
 
+//Kullanici ana sayfada yerel mutfaklar menusu
+    @FindBy(xpath = "//*[@class='row no-gutters list-inline']")
+    public WebElement YerelMutfak;
+
+    //Ana sayfada yerel mutfak munusunde More butonu
+    @FindBy(xpath = "//a[text()=' More ']")
+    public WebElement MoreButton;
+
+    //Ana sayfada More butonuna klikleyince acilan alt menu
+    @FindBy(xpath = "//*[@class='dropdown-menu show']")
+    public WebElement CousineDropdownMenu;
+
+    @FindBy(xpath = "//a[text()='Pizza']")
+    public WebElement PizzaButtonOnCusinneMenu;
+
+    //Kullanici yerel mutfakta pizza klikledikten sonra acilan sayfada sol ustteki Pizza yazisi
+    @FindBy(xpath = "//h4[text()='Pizza']")
+    public WebElement PizzaCousineText;
+
+    //Kullanici yerel mutfaga klikledikten sonra o mutfaga ait restoran sayisi sol ust
+    @FindBy(xpath = "//h6[text()='3 stores']")
+    public WebElement CountOfRest;
 
 
 
