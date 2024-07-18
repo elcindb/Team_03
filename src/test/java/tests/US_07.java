@@ -48,7 +48,7 @@ public class US_07 extends TestBaseRapor {
         Assert.assertTrue(userPage.RequestHasBeenSentAlert.isDisplayed());
 
 
-        Driver.getDriver().quit();
+
 
 
     }

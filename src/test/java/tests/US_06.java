@@ -20,12 +20,13 @@ public class US_06 extends TestBaseRapor { //sayfaya kayıt olabilme testi
         //Kullanıcı anasayfaya gider, sağ üstte "sign in" linkini görür ve üzerine tıklar
         Driver.getDriver().get(ConfigReader.getProperty("customer_Url"));
         userPage.userSignInBotten.click();
-
+        ReusableMethods.wait(3);
         //Daha önce hesabı olmayan kullanıcı Sign Up butonuna tıklayıp "Login" sayfasına ulaşır
         Faker faker=new Faker();
         Actions actions=new Actions(Driver.getDriver());
 
         userPage.userSıgnupButton.click();
+        ReusableMethods.wait(3);
 
         //Kullanıcı Firs Name, Last Name e- mail adress textBoxlarına kendi bilgilerini girer.
 
@@ -62,7 +63,7 @@ public class US_06 extends TestBaseRapor { //sayfaya kayıt olabilme testi
 
         Assert.assertTrue(userPage.registerSuccesYazisi.isDisplayed());
 
-        Driver.getDriver().quit();
+
 
 
     }

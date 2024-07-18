@@ -19,7 +19,7 @@ public class US_40 extends TestBaseRapor {
 
     @Test
     public void KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti (){
-      extentTest = extentReports.createTest("KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti");
+     // extentTest = extentReports.createTest("KuponOluşturabilmeListelemeUpdateEdebilmeSilebilmeTesti");
       adminPage adminPage=new adminPage();
         //Admin URL' yi girer . Kullanıcı adını ve parolasını girer dashboarda erişim sağlar.
         Driver.getDriver().get("https://qa.flavorfetch.com/backoffice/login");
