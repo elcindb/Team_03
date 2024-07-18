@@ -3,15 +3,15 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.merchantPage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.*;
 
-public class US_23 {
+public class US_23 extends TestBaseRapor {
     merchantPage merchantPage = new merchantPage();
 
     @Test
     public void TC_2301(){
+
+        extentTest = extentReports.createTest("Display test of sales values,");
 
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
@@ -39,6 +39,7 @@ public class US_23 {
 
     @Test
     public void TC_2302(){
+        extentTest = extentReports.createTest("order management ALL Last Orders viewing test,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -56,6 +57,7 @@ public class US_23 {
 
     @Test
     public void TC_2303(){
+        extentTest = extentReports.createTest("order management Processing Last Orders Assign Driver testing");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -76,6 +78,7 @@ public class US_23 {
 
     @Test
     public void TC_2304(){
+        extentTest = extentReports.createTest("OrderID button test from orders ready,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -98,6 +101,7 @@ public class US_23 {
 
     @Test
     public void TC_2305(){
+        extentTest = extentReports.createTest("Popular products list display test,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -115,6 +119,7 @@ public class US_23 {
 
     @Test
     public void TC_2306(){
+        extentTest = extentReports.createTest("Statistics review test in the last 30 days,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));
@@ -122,17 +127,19 @@ public class US_23 {
         merchantPage.merchantLoginPassword.sendKeys(ConfigReader.getProperty("merchantPassword"));
         merchantPage.merchantLoginButton.click();
         // Last 30 days sales tıklanır,
+        JSUtilities.scrollToBottom(Driver.getDriver());
+        ReusableMethods.wait(2);
         merchantPage.merchantPopularItemsLast30DaysButonu.click();
         ReusableMethods.wait(2);
         //istatistikler görünmeli,
         Assert.assertTrue(merchantPage.merchantPopularItemsLast30DaysStatics.isEnabled());
         //header >dropdown > logout tuşuna basılır,
-        merchantPage.profileDropdown.click();
-        merchantPage.logOutButton.click();
+        Driver.closeDriver();
     }
 
     @Test
     public void TC_2307(){
+        extentTest = extentReports.createTest("Test to examine user details from the top Customers list,");
         merchantPage merchantPage = new merchantPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("merchant_Url"));

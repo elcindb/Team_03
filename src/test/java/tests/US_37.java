@@ -7,18 +7,20 @@ import pages.adminPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class US_37 {
+public class US_37 extends TestBaseRapor {
 
 
     @Test
     public void TC_3701(){
+        extentTest = extentReports.createTest("Restaurant names from admin's merchant list, search test,");
 
         adminPage adminPage =new adminPage();
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("admin_Url"));
-        adminPage.UserNameTextBox.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
-        adminPage.PasswordTextBox.sendKeys(ConfigReader.getProperty("adminPassword"));
+        adminPage.UserLoginName.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
+        adminPage.PasswordLogintBox.sendKeys(ConfigReader.getProperty("adminPassword"));
         adminPage.SignInButton.click();
 
         // Merchant dropdown menüsünden List tuşunu görüp tıklanır,
@@ -37,11 +39,12 @@ public class US_37 {
     }
     @Test
     public void TC_3702(){
+        extentTest = extentReports.createTest("Test to search and edit Merchant information from the All Merchant List,");
         adminPage adminPage =new adminPage();
         //username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("admin_Url"));
-        adminPage.UserNameTextBox.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
-        adminPage.PasswordTextBox.sendKeys(ConfigReader.getProperty("adminPassword"));
+        adminPage.UserLoginName.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
+        adminPage.PasswordLogintBox.sendKeys(ConfigReader.getProperty("adminPassword"));
         adminPage.SignInButton.click();
 
         //Merchant dropdown menüsünden List tuşunu görüp tıklanır,
@@ -59,12 +62,13 @@ public class US_37 {
     }
     @Test
     public void TC_3703(){
+        extentTest = extentReports.createTest("Test to Add New Merchant from All Merchant List");
         adminPage adminPage =new adminPage();
 
         // username ve password alanına datalar girilir. Sign in butonuna basılır.
         Driver.getDriver().get(ConfigReader.getProperty("admin_Url"));
-        adminPage.UserNameTextBox.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
-        adminPage.PasswordTextBox.sendKeys(ConfigReader.getProperty("adminPassword"));
+        adminPage.UserLoginName.sendKeys(ConfigReader.getProperty("adminuser_gozde"));
+        adminPage.PasswordLogintBox.sendKeys(ConfigReader.getProperty("adminPassword"));
         adminPage.SignInButton.click();
         // Merchant dropdown menüsünden List tuşunu görüp tıklanır,
 
