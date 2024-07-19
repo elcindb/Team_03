@@ -31,9 +31,9 @@ public class US_38 extends TestBaseRapor {
         ReusableMethods.wait(2);
 
         // "Dashboard" menüsünün altındaki "Orders" menüsüne tıklar
-        adminPage.orderButonu.click();
+        adminPage.orderButton.click();
         //Admin Page-de AllOrders butonu
-        adminPage.allorderButonu.click();
+        adminPage.allorderButton.click();
         //All Orders-a tıkladıkdan sonra yeni sayfada "AllOrders" başlığına tiklar
         adminPage.allOrdersTitle.click();
 
@@ -65,16 +65,16 @@ public class US_38 extends TestBaseRapor {
             ReusableMethods.wait(2);
 
             // "Dashboard" menüsünün altındaki "Orders" menüsüne tıklar
-            adminPage.orderButonu.click();
+            adminPage.orderButton.click();
             //Admin Page-de AllOrders butonu
-            adminPage.allorderButonu.click();
+            adminPage.allorderButton.click();
             //All Orders-a tıkladıkdan sonra yeni sayfada "AllOrders" başlığına tiklar
             adminPage.allOrdersTitle.click();
        // Sayfadaki tarih kısmına belirtilen tarih aralığını seçer
         adminPage.startAndEndDateBox.click();
         ReusableMethods.wait(5);
         //Belirli bir tarihe gore filtreleme yapar
-        adminPage.last7Days.click();
+        //adminPage.last7Days.click();
         ReusableMethods.wait(5);
 
 
